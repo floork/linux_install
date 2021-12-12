@@ -1,13 +1,27 @@
-meta + x kitty
-meta + c flameshot (bereich)
-meta + v clipbord history mousepoint
+#flameshot
+meta + c take screenshot
+meta + print open launcher
+print flameshot
+meta + shift + print configure
+
+#browser
 meta + b brave
+meta + u search
+
+#kitty
+meta + c kitty
+
+#clipboard
+meta + v clipbord history mousepoint
+
+#default
 meta + d desktop
 meta + l lock screen
-meta + q quit programm 
-meta + e dolphin
-meta + u search
+meta + q quit programm
 meta + i settings
 meta + p choose screen
 ctrl + esc system activity
 ctrl + alt + esc kill at mousepoint
+
+#dolphin
+meta + e dolphin
