@@ -3,6 +3,10 @@ switch-to-activity-1857dd43-77de-4e4b-b759-9624ce3e02d4=
 switch-to-activity-2b2de710-d152-4fc2-9ce4-13d81438c8fe=
 switch-to-activity-6f690416-35c0-46ad-a74a-475486866d02=
 
+[Alacritty.desktop][Global Shortcuts]
+New=
+_launch=Meta+Y
+
 [KDE Keyboard Layout Switcher][Global Shortcuts]
 Switch keyboard layout to English (US)=
 Switch keyboard layout to German=
@@ -11,21 +15,21 @@ Switch to Next Keyboard Layout=Ctrl+Alt+K
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
-Activate Next Tab=Ctrl+]; Ctrl+PgDown
-Activate Previous Tab=Ctrl+[; Ctrl+PgUp
+Activate Next Tab=Ctrl+PgDown; Ctrl+]
+Activate Previous Tab=Ctrl+PgUp; Ctrl+[
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
-Back=Back; Alt+Left
+Back=Alt+Left; Back
 BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
 Clear=
-Close=Ctrl+W; Ctrl+Esc
+Close=Ctrl+Esc; Ctrl+W
 ConfigureNotifications=
 ConfigureToolbars=
-Copy=Ctrl+C; Ctrl+Ins
+Copy=Ctrl+Ins; Ctrl+C
 CreateFolder=F10
-Cut=Ctrl+X; Shift+Del
+Cut=Shift+Del; Ctrl+X
 DeleteFile=Shift+Del
 DeleteWordBack=Ctrl+Backspace
 DeleteWordForward=Ctrl+Del
@@ -42,14 +46,14 @@ FindPrev=Shift+F3
 FitToHeight=
 FitToPage=
 FitToWidth=
-Forward=Alt+Right; Forward
+Forward=Forward; Alt+Right
 ForwardWord=Ctrl+Right
 FullScreen=Ctrl+Shift+F
 Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Alt+Home; Home Page
+Home=Home Page; Alt+Home
 KeyBindings=Ctrl+Alt+,
 Mail=
 MoveToTrash=Del
@@ -58,7 +62,7 @@ Next=PgDown
 NextCompletion=Ctrl+Down
 Open=Ctrl+O
 OpenRecent=
-Paste=Shift+Ins; Ctrl+V
+Paste=Ctrl+V; Shift+Ins
 Paste Selection=Ctrl+Shift+Ins
 Preferences=Ctrl+Shift+,
 PrevCompletion=Ctrl+Up
@@ -67,7 +71,7 @@ PrintPreview=
 Prior=PgUp
 Quit=Ctrl+Q
 Redo=Ctrl+Shift+Z
-Reload=Refresh; F5
+Reload=F5; Refresh
 RenameFile=F2
 Replace=Ctrl+R
 ReportBug=
@@ -78,7 +82,7 @@ Save=Ctrl+S
 SaveAs=Ctrl+Shift+S
 SaveOptions=
 SelectAll=Ctrl+A
-ShowHideHiddenFiles=Alt+.; Ctrl+H
+ShowHideHiddenFiles=Ctrl+H; Alt+.
 ShowMenubar=Ctrl+M
 ShowStatusbar=
 ShowToolbar=
@@ -91,7 +95,7 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl+=; Ctrl++
+ZoomIn=Ctrl++; Ctrl+=
 ZoomOut=Ctrl+-
 
 [brave-browser.desktop][Global Shortcuts]
@@ -109,10 +113,10 @@ Toggle Touchpad=Touchpad Toggle
 
 [kded5][Global Shortcuts]
 Show System Activity=Ctrl+Esc
-display=Meta+P; Display
+display=Display; Meta+P
 
 [khotkeys][Global Shortcuts]
-{c116fd9b-4864-4a7e-8f88-c886564c3a66}=Ctrl+Alt+T
+{c116fd9b-4864-4a7e-8f88-c886564c3a66}=
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Meta+U
 
 [kitty.desktop][Global Shortcuts]
@@ -123,12 +127,12 @@ decrease_microphone_volume=Microphone Volume Down
 decrease_volume=Volume Down
 increase_microphone_volume=Microphone Volume Up
 increase_volume=Volume Up
-mic_mute=Meta+Volume Mute; Microphone Mute
+mic_mute=Microphone Mute; Meta+Volume Mute
 mute=Volume Mute
 
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=
-Lock Session=Meta+L; Ctrl+Alt+L; Screensaver
+Lock Session=Meta+L; Screensaver; Ctrl+Alt+L
 Log Out=Ctrl+Alt+Del
 Log Out Without Confirmation=
 Reboot Without Confirmation=
@@ -137,7 +141,7 @@ Reboot Without Confirmation=
 Activate Window Demanding Attention=Ctrl+Alt+A
 Decrease Opacity=
 Expose=Ctrl+F9
-ExposeAll=Launch (C); Ctrl+F10
+ExposeAll=Ctrl+F10; Launch (C)
 ExposeClass=Ctrl+F7
 Increase Opacity=
 Invert Screen Colors=
@@ -160,7 +164,7 @@ Switch Window Down=Meta+Alt+Down
 Switch Window Left=Meta+Alt+Left
 Switch Window Right=Meta+Alt+Right
 Switch Window Up=Meta+Alt+Up
-Switch to Desktop 1=Meta+1; Ctrl+F1
+Switch to Desktop 1=Ctrl+F1; Meta+1
 Switch to Desktop 10=
 Switch to Desktop 11=
 Switch to Desktop 12=
@@ -173,7 +177,7 @@ Switch to Desktop 18=
 Switch to Desktop 19=
 Switch to Desktop 2=Ctrl+F2; Meta+2
 Switch to Desktop 20=
-Switch to Desktop 3=Meta+3; Ctrl+F3
+Switch to Desktop 3=Ctrl+F3; Meta+3
 Switch to Desktop 4=Ctrl+F4; Meta+4
 Switch to Desktop 5=
 Switch to Desktop 6=
@@ -213,7 +217,7 @@ Window Fullscreen=
 Window Grow Horizontal=
 Window Grow Vertical=
 Window Lower=
-Window Maximize=Meta+Up; Meta+PgUp
+Window Maximize=Meta+PgUp; Meta+Up
 Window Maximize Horizontal=
 Window Maximize Vertical=
 Window Minimize=Meta+PgDown
@@ -299,7 +303,7 @@ _launch=Meta+E
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=Alt+Shift+F2
-_launch=Alt+Space; Alt+F2; Search
+_launch=Alt+Space; Search; Alt+F2
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
 _launch=Meta+.
@@ -360,3 +364,6 @@ kcm-lookandfeel=
 kcm-users=
 powerdevilprofilesconfig=
 screenlocker=
+
+[terminator.desktop][Global Shortcuts]
+_launch=Ctrl+Alt+T
