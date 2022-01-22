@@ -30,7 +30,7 @@ sudo pacman -Ss thunderbird-i18n
 yay -S brave celluloid code-git dropbox github-desktop-bin github-cli pycharm-community-edition spotify timeshift htop nmon hyper
 
 #install flatpak programms
-flatpak install flathub com.discordapp.Discord de.haeckerfelix.Fragments org.onlyoffice.desktopeditors com.github.alainm23.planner 
+flatpak install flathub com.discordapp.Discord de.haeckerfelix.Fragments org.onlyoffice.desktopeditors com.github.alainm23.planner vgrive
 
 #install snap programms
 sudo snap install whatsapp-for-linux
