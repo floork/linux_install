@@ -5,3 +5,5 @@ cd ./scripts
 ./pacman_programm_list.sh
 ./fixlocale.sh
 ./arch_keyboard.sh
+./qemu.sh
+./install_zsh.sh
