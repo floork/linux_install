@@ -8,18 +8,5 @@
 #makepkg -si
 
 #install programms
-yay -S yes Y |
-  brave
-  celluloid
-  code-git
-  dropbox
-  github-desktop-bin
-  github-cli
-  pycharm-community-edition
-  spotify
-  timeshift
-  htop
-  nmon
-  ttf-ms-fonts
-  alacritty
+yes Y | yay -S brave celluloid code-git dropbox github-desktop-bin github-cli pycharm-community-edition spotify timeshift htop nmon ttf-ms-fonts alacritty
 
