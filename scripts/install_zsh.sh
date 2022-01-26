@@ -2,37 +2,29 @@
  sudo pacman -S zsh
  chsh -s $(which zsh)
 
-#install zi (zsh package manager)
-sh -c "$(curl -fsSL https://git.io/get-zi)" -- -i skip -b v1.0.0
-
-# Will add minimal configuration
-sh -c "$(curl -fsSL https://git.io/get-zi)" --
-
-# Non interactive. Just clone or update repository.
-sh -c "$(curl -fsSL https://git.io/get-zi)" -- -i skip
-
-# Minimal configuration + annexes.
-sh -c "$(curl -fsSL https://git.io/get-zi)" -- -a annex
-
-# Minimal configuration + annexes + zunit.
-sh -c "$(curl -fsSL https://git.io/get-zi)" -- -a zunit
-
-# Minimal configuration with loader
-sh -c "$(curl -fsSL https://git.io/get-zi)" -- -a loader
-
-# Suggest your .zshrc configuration to:
-# https://github.com/z-shell/playground
-sh -c "$(curl -fsSL https://git.io/get-zi)" -- -a ???
-
-#switch to zi
-zi self-update
+#install zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #install plugins
-zi light zsh-users/zsh-autosuggestions
-zi light zsh-users/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 #starship theme
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-# ~/.zshrc
-eval "$(starship init zsh)"
+
+
+sudo rm ~/.zshrc
+sudo touch ~/.zshrc
+echo "export ZSH="$HOME/.oh-my-zsh"" | sudo tee ~/.zshrc
+echo "" | sudo tee -a ~/.zshrc
+echo "#plugins" | sudo tee -a ~/.zshrc
+echo "plugins=(git zsh-syntax-highlighting zsh-autosuggestions)" | sudo tee -a ~/.zshrc
+echo "source $ZSH/oh-my-zsh.sh" | sudo tee -a ~/.zshrc
+echo "" | sudo tee -a ~/.zshrc
+echo "#alias" | sudo tee -a ~/.zshrc
+echo "alias cls="clear"" | sudo tee -a ~/.zshrc
+echo "alias ll="ls -alF"" | sudo tee -a ~/.zshrc
+echo "alias zshrc="vim ~/.zshrc"" | sudo tee -a ~/.zshrc
+echo "#theme" | sudo tee -a ~/.zshrc
+echo "eval "$(starship init zsh)"" | sudo tee -a ~/.zshrc
 
