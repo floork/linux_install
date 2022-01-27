@@ -13,8 +13,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 
-sudo rm ~/.zshrc
-sudo touch ~/.zshrc
 echo "export ZSH="$HOME/.oh-my-zsh"" | sudo tee ~/.zshrc
 echo "" | sudo tee -a ~/.zshrc
 echo "#plugins" | sudo tee -a ~/.zshrc
