@@ -1,13 +1,13 @@
-cd ./scripts_ubun_en
-./apt_install.sh
-./qemu_deb.sh
+#!/bin/bash
 
-cd ..
+/scripts_ubun_en
+sh /apt_install.sh
+sh /qemu_deb.sh
 
 #global scripts
-cd ./global_scripts
-./de_keyboard.sh
-./de_locale.sh
-./fix_dhcp.sh
-./install_flatpak_und_programms.sh
-./install_zsh.sh
+/global_scripts
+sh /de_keyboard.sh
+sh /de_locale.sh
+sh /fix_dhcp.sh
+sh /install_flatpak_und_programms.sh
+sh /install_zsh.sh
