@@ -1,5 +1,4 @@
-#install zsh
- sudo apt install zsh
+#make default shell
  chsh -s $(which zsh)
 
 #install zshrc

@@ -7,7 +7,7 @@ add-apt-repository ppa:aslatter/ppa
 sudo apt update
 
 #install packages
-sudo apt install gh timeshift htop ttf-mscorefonts-installer alacritty gparted kate konsole kde-l10n-de kitty git
+sudo apt install gh timeshift htop ttf-mscorefonts-installer alacritty gparted kate konsole kde-l10n-de kitty git zsh flatpak
 
 #for ms fonts
 sudo fc-cache -vr

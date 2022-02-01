@@ -1,7 +1,13 @@
 cd ./scripts_ubun_en
-./de_keyboard.sh
-./en.locale.sh
-./fix_dhcp.sh
 ./apt_install.sh
-./install_flatpak_und_programms.sh
 ./qemu_deb.sh
+
+cd ..
+
+#global scripts
+cd ./global_scripts
+./de_keyboard.sh
+./de_locale.sh
+./fix_dhcp.sh
+./install_flatpak_und_programms.sh
+./install_zsh.sh
