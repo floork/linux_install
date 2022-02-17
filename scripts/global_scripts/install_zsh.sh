@@ -21,8 +21,9 @@ echo "" | sudo tee -a ~/.zshrc
 echo "#alias" | sudo tee -a ~/.zshrc
 echo "alias cls="clear"" | sudo tee -a ~/.zshrc
 echo "alias ll="ls -alF"" | sudo tee -a ~/.zshrc
-echo "alias zshrc="vim ~/.zshrc"" | sudo tee -a ~/.zshrc
-echo "alias packy="sudo apt install" | sudo tee -a ~/.zshrc
+echo "alias zshrc="sudo vim ./.zshrc"" | sudo tee -a ~/.zshrc
+echo "alias packy="sudo pacman -S"" | sudo tee -a ~/.zshrc
+echo "alias apacky="sudo apt install"" | sudo tee -a ~/.zshrc
 echo "#theme" | sudo tee -a ~/.zshrc
 echo "eval "$(starship init zsh)"" | sudo tee -a ~/.zshrc
 

@@ -33,3 +33,4 @@ fi
 #do theming
 cd config/
 sh theming.sh
+sh cursor.sh
