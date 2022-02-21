@@ -3,6 +3,8 @@ autojump
 brave-bin
 dxvk-bin
 github-desktop-bin
+hsqldb2-java
+libreoffice-extension-languagetool
 lightly-git
 mangohud
 mangohud-common
@@ -16,5 +18,7 @@ ocs-url
 sddm-nordic-theme-git
 snapper-gui-git
 timeshift
+ttf-gentium-basic
 ttf-meslo
 ttf-ms-fonts
+visual-studio-code-bin

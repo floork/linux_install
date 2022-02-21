@@ -7,6 +7,9 @@ xorg-xkill
 xorg-xinit
 xterm
 plasma-desktop
+adobe-source-code-pro-fonts
+adobe-source-sans-pro-fonts
+adobe-source-serif-pro-fonts
 alsa-plugins
 alsa-utils
 ark
@@ -61,6 +64,9 @@ gst-plugins-ugly
 gwenview
 haveged
 htop
+hunspell
+hunspell-en_us
+hunspell-de_de
 iptables-nft
 jdk-openjdk
 kate
@@ -78,6 +84,9 @@ layer-shell-qt
 libdvdcss
 libnewt
 libtool
+libreoffice-still
+libreoffice-extension-texmaths
+libreoffice-exten
 linux
 linux-firmware
 linux-headers
@@ -90,9 +99,11 @@ milou
 nano
 neofetch
 networkmanager
+noto-fonts
 noto-fonts-emoji
 ntfs-3g
 ntp
+numlockx
 okular
 openbsd-netcat
 openssh
@@ -130,8 +141,13 @@ synergy
 systemsettings
 terminus-font
 traceroute
+ttf-caladea
+ttf-carlito
+ttf-dejavu
 ttf-droid
 ttf-hack
+ttf-liberation
+ttf-linux-libertine-g
 ttf-roboto
 ufw
 unrar

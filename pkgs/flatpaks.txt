@@ -15,6 +15,5 @@ io.github.shiftey.Desktop
 com.jetbrains.PyCharm-Community
 com.spotify.Client
 org.signal.Signal
-org.libreoffice.LibreOffice
 org.videolan.VLC
 org.gimp.GIMP

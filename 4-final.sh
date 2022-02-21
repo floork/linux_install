@@ -34,6 +34,17 @@ echo -e "Updating grub..."
 grub-mkconfig -o /boot/grub/grub.cfg
 echo -e "All set!"
 
+cp -r ~/linux_install/Future-black-cursors /usr/share/icons
+cat <<EOF > /usr/share/icons/default/
+[Icon Theme]
+Inherits=Future-black Cursors
+EOF
+echo -ne "
+-------------------------------------------------------------------------
+                            Numlockx
+-------------------------------------------------------------------------
+"
+echo "numlockx on" | tee -a /etc/X11/xinit/xinitrc
 echo -ne "
 -------------------------------------------------------------------------
                     Enabling Login Display Manager
@@ -42,10 +53,12 @@ echo -ne "
 systemctl enable sddm.service
 echo -ne "
 -------------------------------------------------------------------------
-                    Setting up SDDM Theme
+                    Setting up SDDM Theme + Numlock for SDDM
 -------------------------------------------------------------------------
 "
 cat <<EOF > /etc/sddm.conf
+[General]
+Numlock=on
 [Theme]
 Current=Nordic
 EOF
