@@ -1,5 +1,0 @@
-script print(make shure u have a internet connection), the inputs ++ the executen (language, distro)
-
-
-
-
