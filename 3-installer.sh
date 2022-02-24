@@ -23,6 +23,7 @@ cd ~/yay
 makepkg -si --noconfirm
 cd ~
 git clone "https://github.com/floork/zsh.git"
+git clone "https://github.com/floork/zsh"
 cd ~/zsh
 bash zsh.sh
 
@@ -44,5 +45,10 @@ export PATH=$PATH:~/.local/bin
 cp -r ~/linux_install/dotfiles/* ~/.config/
 pip install konsave
 konsave -i ~/linux_install/kde.knsv
+
+export PATH=$PATH:~/.local/bin
+cp -r ~/linux_install/dotfiles/* ~/.config/
+pip install konsave
+konsave -i ~/ArchTitus/kde.knsv
 sleep 1
 konsave -a kde
