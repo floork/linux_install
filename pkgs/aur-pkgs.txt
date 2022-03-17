@@ -1,14 +1,13 @@
-alacritty
 autojump
-brave-bin
+bridge-utils
 dxvk-bin
 github-desktop-bin
 hsqldb2-java
 libreoffice-extension-languagetool
 lightly-git
+lightlyshaders-git
 mangohud
 mangohud-common
-nerd-fonts-fira-code
 nerd-fonts-complete
 nordic-darker-standard-buttons-theme
 nordic-darker-theme
@@ -21,4 +20,6 @@ timeshift
 ttf-gentium-basic
 ttf-meslo
 ttf-ms-fonts
+vde2
 visual-studio-code-bin
+ 
