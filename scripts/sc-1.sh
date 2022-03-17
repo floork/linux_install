@@ -183,5 +183,7 @@ set_option KEYMAP $keymap
 
 clear
 logo
+install_type
 timezone
 keymap
+clear

@@ -40,9 +40,7 @@ if [[ $INSTALL_TYPE == "FULL" ]]; then
     konsave -a kde
 
     cp -r ~/linux_install/Future-black-cursors /usr/share/icons
-    cat <<EOF > /usr/share/icons/default/
-    [Icon Theme]
-    Inherits=Future-black Cursors
-    EOF
+    echo '[Icon Theme]' > /usr/share/icons/default/
+    echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/
 fi
 

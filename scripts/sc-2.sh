@@ -61,13 +61,10 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 if [[ ${INSTALL_TYPE} == "FULL" ]]; then
-    echo [General] >> /etc/sddm.conf
-    echo Numlock=on >> /etc/sddm.conf
-    echo [Theme] >> /etc/sddm.conf
-    echo Current=Nordic >> /etc/sddm.conf
-  fi
-
-
+    echo "[General]" > /etc/sddm.conf
+    echo "Numlock=on" >> /etc/sddm.conf
+    echo "[Theme]" >> /etc/sddm.conf
+    echo "Current=Nordic" >> /etc/sddm.conf
 fi
 echo -ne "
 -------------------------------------------------------------------------
