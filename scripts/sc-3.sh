@@ -6,7 +6,7 @@ do
    sudo pacman -S --noconfirm --needed ${line}
 done
 
-sed -n '/'$INSTALL_TYPE'/q;p' ~/ArchTitus/pkg-files/pacman-pkgs.txt | while read line
+sed -n '/'$INSTALL_TYPE'/q;p' ~/linux_install/pkg-files/pacman-pkgs.txt | while read line
 do
   if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
   then
