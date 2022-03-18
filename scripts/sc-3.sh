@@ -44,3 +44,7 @@ if [[ $INSTALL_TYPE == "FULL" ]]; then
     echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/
 fi
 
+if [[ $INSTALL_TYPE == "FULL" ] && [ $FULLY == "FULL" ]]; then
+do
+( bash $SCRIPT_DIR/scripts/zsh.sh )|& tee zsh.log
+done

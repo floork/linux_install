@@ -121,16 +121,6 @@ select_option() {
     return $(( $active_col + $active_row * $colmax ))
 }
 
-installtype () {
-  echo -ne "Please select type of installation:\n\n
-  Full install: Installs full featured desktop enviroment, with added apps and themes needed for everyday use\n
-  Minimal Install: Installs only apps few selected apps to get you started\n"
-  options=(FULL MINIMAL)
-  select_option $? 4 "${options[@]}"
-  install_type=${options[$?]}
-  set_option INSTALL_TYPE $install_type
-}
-
 logo () {
 echo -ne "
 
@@ -146,6 +136,25 @@ echo -ne "
 --------------------------------------------------------------------------
 "
 }
+
+fully () {
+    echo -ne "Do you want to install the whole script, or just to programms: "
+    options=(FULL ONLY_PROGRAMMS)
+    select_option $? 4 "${options[@]}"
+    full=${options[$?]}
+    set_option FULLY $FULLY
+}
+
+installtype () {
+  echo -ne "Please select type of installation:\n\n
+  Full install: Installs full featured desktop enviroment, with added apps and themes needed for everyday use\n
+  Minimal Install: Installs only apps few selected apps to get you started\n"
+  options=(FULL MINIMAL)
+  select_option $? 4 "${options[@]}"
+  install_type=${options[$?]}
+  set_option INSTALL_TYPE $install_type
+}
+
 timezone () {
 # Added this from arch wiki https://wiki.archlinux.org/title/System_time
 time_zone="$(curl --fail https://ipapi.co/timezone)"
@@ -183,6 +192,7 @@ set_option KEYMAP $keymap
 
 clear
 logo
+fully
 installtype
 timezone
 keymap
