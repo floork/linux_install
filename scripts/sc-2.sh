@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ ${FULLY} == "FULL" ]]; then
+if [[ ${full_install} == "FULL" ]]; then
   source $CONFIGS_DIR/setup.conf
   iso=$(curl -4 ifconfig.co/country-iso)
   timedatectl set-ntp true
@@ -37,6 +37,6 @@ if [[ ${FULLY} == "FULL" ]]; then
       echo "Current=Nordic" >> /etc/sddm.conf
   fi
 fi
-else 
+elif [[ ${full_install} == "ONLY_PROGRAMMS" ]]; then
   continue
 fi

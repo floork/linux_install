@@ -141,8 +141,8 @@ fully () {
     echo -ne "Do you want to install the whole script, or just to programms: "
     options=(FULL ONLY_PROGRAMMS)
     select_option $? 4 "${options[@]}"
-    full=${options[$?]}
-    set_option FULLY $fully
+    full_install=${options[$?]}
+    set_option FULL_INSTALL $full_install
 }
 
 installtype () {
