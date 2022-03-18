@@ -3,14 +3,12 @@
 if [[ $INSTALL_TYPE != "FULL" ]]; then
   cat $SCRIPT_DIR/pkg-files/pacman-pkgs.txt | while read line
   do
+    echo "INSTALLING: ${line}"
+    sudo pacman -S --noconfirm --needed ${line}
     if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
     then
       # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
       continue
-    fi
-    else
-      echo "INSTALLING: ${line}"
-      sudo pacman -S --noconfirm --needed ${line}
     fi
   done 
 fi
