@@ -42,9 +42,6 @@ if [[ $INSTALL_TYPE == "FULL" ]]; then
     cp -r $SCRIPT_DIR/Future-black-cursors /usr/share/icons
     echo '[Icon Theme]' > /usr/share/icons/default/
     echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/
-fi
 
-if [[ $INSTALL_TYPE == "FULL" ] && [ ${full_install} == "FULL" ]]; then
-do
-( bash $SCRIPT_DIR/scripts/zsh.sh )|& tee zsh.log
-done
+    ( bash $SCRIPT_DIR/scripts/zsh.sh )|& tee zsh.log
+fi
