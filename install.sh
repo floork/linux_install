@@ -39,6 +39,3 @@ echo -ne "
 
 -------------------------------------------------------------------------
 "
-
-echo "Your System will reboot in 10s"
-systemctl reboot 10
