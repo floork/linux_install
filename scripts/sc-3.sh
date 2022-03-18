@@ -8,7 +8,7 @@ if [[ $INSTALL_TYPE != "FULL" ]]; then
       # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
       continue
     fi
-    else 
+    elif [[ ${line} != '--END OF MINIMAL INSTALL--' ]]
       echo "INSTALLING: ${line}"
       sudo pacman -S --noconfirm --needed ${line}
     fi
