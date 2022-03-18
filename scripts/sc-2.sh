@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $CONFIGS_DIR/setup.conf
+source SCRIPTS_DIR/sc-1.sh
 
 if [[ ${full_install} == "FULL" ]]; then
   iso=$(curl -4 ifconfig.co/country-iso)
