@@ -1,25 +1,23 @@
 # !/bin/bash
 
-if [[ $INSTALL_TYPE != "FULL" ]]; then
-  cat $SCRIPT_DIR/pkg-files/pacman-pkgs.txt | while read line
-  do
+cat $SCRIPT_DIR/pkgs/pacman-pkgs.txt | while read line
+do
     echo "INSTALLING: ${line}"
-    sudo pacman -S --noconfirm --needed ${line}
-    if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
-    then
-      # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
-      continue
-    fi
-  done 
-fi
+   sudo pacman -S --noconfirm --needed ${line}
+done
+
+sed -n '/'$INSTALL_TYPE'/q;p' $SCRIPT_DIR/pkgs/pacman-pkgs.txt | while read line
+do
+  if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
+  then
+    # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
+    continue
+  fi
+  echo "INSTALLING: ${line}"
+  sudo pacman -S --noconfirm --needed ${line}
+done
 
 if [[ $INSTALL_TYPE == "FULL" ]]; then
-    cat $SCRIPT_DIR/pkg-files/pacman-pkgs.txt | while read line
-    do
-      echo "INSTALLING: ${line}"
-      sudo pacman -S --noconfirm --needed ${line}
-    done
-
     cat $SCRIPT_DIR/pkgs/aur-pkgs.txt | while read line
     do
         echo "INSTALLING Yay-Packages: ${line}"
