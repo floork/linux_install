@@ -1,21 +1,17 @@
 # !/bin/bash
 
-cat $SCRIPT_DIR/pkgs/pacman-pkgs.txt | while read line
-do
+if [[ $INSTALL_TYPE != "FULL" ]]; then
+  cat $SCRIPT_DIR/pkgs/pacman-pkgs.txt | while read line
+  do
+    if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
+    then
+      # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
+      continue
+    fi
     echo "INSTALLING: ${line}"
-   sudo pacman -S --noconfirm --needed ${line}
-done
-
-sed -n '/'$INSTALL_TYPE'/q;p' $SCRIPT_DIR/pkgs/pacman-pkgs.txt | while read line
-do
-  if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
-  then
-    # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
-    continue
-  fi
-  echo "INSTALLING: ${line}"
-  sudo pacman -S --noconfirm --needed ${line}
-done
+    sudo pacman -S --noconfirm --needed ${line}
+  done
+fi
 
 if [[ $INSTALL_TYPE == "FULL" ]]; then
     cat $SCRIPT_DIR/pkgs/aur-pkgs.txt | while read line
@@ -45,3 +41,4 @@ if [[ $INSTALL_TYPE == "FULL" ]]; then
 
     ( bash $SCRIPT_DIR/scripts/zsh.sh )|& tee zsh.log
 fi
+
