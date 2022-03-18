@@ -142,7 +142,7 @@ fully () {
     options=(FULL ONLY_PROGRAMMS)
     select_option $? 4 "${options[@]}"
     full=${options[$?]}
-    set_option FULLY $FULLY
+    set_option FULLY $fully
 }
 
 installtype () {
