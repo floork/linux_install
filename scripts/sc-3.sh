@@ -17,6 +17,7 @@ if [[ ${full_install} != "FULL" ]]; then
 fi
 
 if [[ ${full_install} == "FULL" ]]; then
+  do
   if [[ $INSTALL_TYPE == "FULL" ]]; then
       cat $SCRIPT_DIR/pkgs/aur-pkgs.txt | while read line
       do

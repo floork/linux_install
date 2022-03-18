@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [[ ${full_install} == "FULL" ]]; then
+  do
   iso=$(curl -4 ifconfig.co/country-iso)
   timedatectl set-ntp true
   pacman -S --noconfirm archlinux-keyring #update keyrings to latest to prevent packages failing to install
@@ -36,5 +37,6 @@ if [[ ${full_install} == "FULL" ]]; then
       echo "[Theme]" >> /etc/sddm.conf
       echo "Current=Nordic" >> /etc/sddm.conf
   fi
+  done
 fi
 
