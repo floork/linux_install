@@ -24,7 +24,7 @@ if [[ ${full_install} == "FULL" ]]; then
             echo "INSTALLING Yay-Packages: ${line}"
            yay -S --noconfirm --needed ${line}
         done
-  
+
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         cat $SCRIPT_DIR/pkgs/flatpaks.txt | while read line
         do
@@ -33,18 +33,18 @@ if [[ ${full_install} == "FULL" ]]; then
         done
         #give flatpak access to themes
         sudo flatpak override --filesystem=$HOME/.themes
-  
+
         cp -r $SCRIPT_DIR/configs/.config/* ~/.config/
         pip install konsave
         konsave -i $SCRIPT_DIR/configs/kde.knsv
         sleep 1
         konsave -a kde
-  
+
         cp -r $SCRIPT_DIR/Future-black-cursors /usr/share/icons
         echo '[Icon Theme]' > /usr/share/icons/default/
         echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/
-  
+
         ( bash $SCRIPT_DIR/scripts/zsh.sh )|& tee zsh.log
-    fi
+    fi;
   done
 fi
