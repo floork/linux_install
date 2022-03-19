@@ -41,7 +41,7 @@ keymaps () {
     0) No
     "
     read -r correct_keymap
-
+}
 fully(){
     echo -ne "
     Do you want to install the whole script, or just to programms:
@@ -74,5 +74,3 @@ timezone
 keymaps
 fully
 installtype
-
-
