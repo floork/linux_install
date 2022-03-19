@@ -1,6 +1,6 @@
 #!/bin/bash
 set -a
-SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+SCRIPT_DIR=$(whoami)/linux_install
 set +a
 echo "#!/bin/bash" > $SCRIPT_DIR/configs/data
 logo () {
