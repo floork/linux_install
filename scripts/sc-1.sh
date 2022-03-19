@@ -5,10 +5,9 @@
 # user name, password, etc.
 
 # set up a config file
+touch $CONFIGS_DIR/setup.conf
 CONFIG_FILE=$CONFIGS_DIR/setup.conf
-if [ ! -f $CONFIG_FILE ]; then # check if file exists
-    touch -f $CONFIG_FILE # create file if not exists
-fi
+
 
 # set options in setup.conf
 set_option() {
