@@ -29,13 +29,13 @@ read -r time_zone
 case $time_zone in
     1)
     echo "${time_zone} set as timezone"
-    keymap
+    keymaps
     ;;
     0)
     echo "Please enter your desired timezone e.g. Europe/London :" 
     read new_timezone
     echo "${new_timezone} set as timezone"
-    keymap
+    keymaps
     ;;
     *)
     echo "Try again!";
