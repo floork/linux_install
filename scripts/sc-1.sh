@@ -1,7 +1,14 @@
 #!/bin/bash
-set -a
-SCRIPT_DIR=$(whoami)/linux_install
-set +a
+
+echo $USER
+read user
+if [[ ${user} == "root" ]]; then
+    SCRIPT_DIR=/home/$SUDO_USER/linux_install
+else
+    SCRIPT_DIR=$HOME/linux_install
+fi
+
+
 echo "#!/bin/bash" > $SCRIPT_DIR/configs/data
 logo () {
 echo -ne "
