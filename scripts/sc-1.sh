@@ -98,16 +98,14 @@ installtype() {
     Minimal Install: Installs only apps few selected apps to get you started\n
     1) Full
     0) Minimal
+    Choose an option:  
     "
     read -r install_type
-case $install_type in
-    1)
-    ;;
-    0)
-    ;;
-    *)
+    if ["$install_type" == "1"] || ["$install_type" == "0"]; then
+    continue
+    else
     installtype
-    ;;
+    if
 esac
 }
 
