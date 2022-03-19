@@ -62,11 +62,11 @@ case $correct_keymap in
     fully
     ;;
     0)
-    keymap
+    keymaps
     ;;
     *)
     echo "Try again!";
-    keymap
+    keymaps
     ;;
 esac
 }
