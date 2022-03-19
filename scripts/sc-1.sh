@@ -1,4 +1,10 @@
-#!/bin/bash
+
+#!/usr/bin/env bash
+# This script will ask users about their prefrences 
+# like disk, file system, timezone, keyboard layout,
+# user name, password, etc.
+
+# set up a config file
 CONFIG_FILE=$CONFIGS_DIR/setup.conf
 if [ ! -f $CONFIG_FILE ]; then # check if file exists
     touch -f $CONFIG_FILE # create file if not exists

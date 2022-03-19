@@ -1,4 +1,6 @@
 # !/bin/bash
+source ${HOME}/linux_install//configs/setup.conf
+
 if [[ ${full_install} != "FULL" ]]; then
     if [[ $INSTALL_TYPE != "FULL" ]]; then
       cat $SCRIPT_DIR/pkgs/pacman-pkgs.txt | while read line

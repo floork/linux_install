@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ${HOME}/linux_install//configs/setup.conf
 ${LOGO}
 
 if [[ ${full_install} == "FULL" ]]; then
