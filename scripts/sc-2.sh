@@ -2,7 +2,7 @@
 source ${HOME}/linux_install/scripts/sc-1.sh
 ${LOGO}
 
-if [[ ${full_install} == "FULL" ]]; then
+if [[ ${full_install} == "1" ]]; then
     timedatectl set-ntp true
     sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
     locale-gen
@@ -13,7 +13,7 @@ if [[ ${full_install} == "FULL" ]]; then
     # Set keymaps
     localectl --no-ask-password set-keymap ${KEYMAP}
   
-    if [[ ${INSTALL_TYPE} == "FULL" ]]; then
+    if [[ ${install_type} == "1" ]]; then
       echo -ne "
       -------------------------------------------------------------------------
                                   Numlockx

@@ -1,8 +1,8 @@
 # !/bin/bash
 source ${HOME}/linux_install/scripts/sc-1.sh
 
-if [[ ${full_install} != "FULL" ]]; then
-    if [[ $INSTALL_TYPE != "FULL" ]]; then
+if [[ ${full_install} == "0" ]]; then
+    if [[ ${install_type} == "0" ]]; then
       cat $SCRIPT_DIR/pkgs/pacman-pkgs.txt | while read line
       do
         if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
@@ -16,8 +16,8 @@ if [[ ${full_install} != "FULL" ]]; then
     fi
 fi
 
-if [[ ${full_install} == "FULL" ]]; then
-    if [[ $INSTALL_TYPE == "FULL" ]]; then
+if [[ ${full_install} == "1" ]]; then
+    if [[ ${install_type} == "1" ]]; then
         cat $SCRIPT_DIR/pkgs/aur-pkgs.txt | while read line
         do
             echo "INSTALLING Yay-Packages: ${line}"
