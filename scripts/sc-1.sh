@@ -101,11 +101,25 @@ installtype() {
     Choose an option:  
     "
     read -r install_type
-    if ["$install_type" == "1"] || ["$install_type" == "0"]; then
-    continue
-    else
+    echo -ne "
+    Your anwser was ${install_type} \n
+    Is this Correct?
+    1) Yes
+    0) No
+    "
+    read -r correct_type
+case $correct_type in 
+    1) 
+    echo "nice"
+    ;;
+    0)
     installtype
-    if
+    ;;
+    *)
+    echo "Try again!";
+    installtype
+    ;;
+esac
 }
 
 clear
