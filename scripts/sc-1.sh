@@ -1,5 +1,6 @@
 #!/bin/bash
-echo "#!/bin/bash" > ${HOME}/linux_install/config/conf.conf
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+echo "#!/bin/bash" > $SCRIPT_DIR/config/conf.conf
 logo () {
 echo -ne "
 
