@@ -41,4 +41,4 @@ echo -ne "
 
 echo "Your System will Reboot in 10 seconds"
 sleep 10s
-reboot -h now
+#reboot -h now
