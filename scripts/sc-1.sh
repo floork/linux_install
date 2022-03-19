@@ -147,7 +147,7 @@ fully () {
     options=(FULL ONLY_PROGRAMMS)
     select_option $? 4 "${options[@]}"
     full_install=${options[$?]}
-    echo FULL_INSTALL $full_install >>$CONFIG_FILE
+    set_option FULL_INSTALL $full_install
 }
 
 installtype () {
