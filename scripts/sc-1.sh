@@ -25,7 +25,7 @@ timezone () {
     1) Yes
     0) No
     Choose an option:  " 
-read -r time_zone
+    read -r time_zone
 }
 
 keymaps () {
@@ -41,8 +41,6 @@ keymaps () {
     0) No
     "
     read -r correct_keymap
-case $correct_keymap in 
-}
 
 fully(){
     echo -ne "
