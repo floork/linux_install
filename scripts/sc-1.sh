@@ -4,12 +4,8 @@ echo $USER
 read user
 if [[ ${user} == "root" ]]; then
     SCRIPT_DIR=/home/$SUDO_USER/linux_install
-    clear
-    continue
 else
     SCRIPT_DIR=$HOME/linux_install
-    clear
-    continue
 fi
 
 
