@@ -74,3 +74,7 @@ timezone
 keymaps
 fully
 installtype
+
+
+    ( bash $SCRIPT_DIR/scripts/sc-2.sh )|& tee sc-2.log
+    

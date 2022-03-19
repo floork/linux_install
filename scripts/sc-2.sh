@@ -30,3 +30,5 @@ if [[ ${full_install} == "1" ]]; then
     fi
 fi
 
+
+( bash $SCRIPT_DIR/scripts/sc-3.sh )|& tee sc-3.log
