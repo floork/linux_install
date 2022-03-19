@@ -106,7 +106,6 @@ installtype() {
     else
     installtype
     if
-esac
 }
 
 clear
