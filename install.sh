@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -a
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+set +a
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
@@ -13,7 +16,7 @@ echo -ne "
                 Welcome to my Post-Install Script
 --------------------------------------------------------------------------
 "
-    ( bash $HOME/scripts/sc-1.sh )|& tee sc-1.log
+    ( bash $SCRIPT_DIR/scripts/sc-1.sh )|& tee sc-1.log
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
