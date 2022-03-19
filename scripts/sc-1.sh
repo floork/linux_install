@@ -4,18 +4,18 @@
 # like disk, file system, timezone, keyboard layout,
 # user name, password, etc.
 
-# set up a config file
-touch $CONFIGS_DIR/setup.conf
-CONFIG_FILE=$CONFIGS_DIR/setup.conf
-
-
-# set options in setup.conf
-set_option() {
-    if grep -Eq "^${1}.*" $CONFIG_FILE; then # check if option exists
-        sed -i -e "/^${1}.*/d" $CONFIG_FILE # delete option if exists
-    fi
-    echo "${1}=${2}" >>$CONFIG_FILE # add option
-}
+## set up a config file
+#touch $CONFIGS_DIR/setup.conf
+#CONFIG_FILE=$CONFIGS_DIR/setup.conf
+#
+#
+## set options in setup.conf
+#set_option() {
+#    if grep -Eq "^${1}.*" $CONFIG_FILE; then # check if option exists
+#        sed -i -e "/^${1}.*/d" $CONFIG_FILE # delete option if exists
+#    fi
+#    echo "${1}=${2}" >>$CONFIG_FILE # add option
+#}
 # Renders a text based list of options that can be selected by the
 # user using up, down and enter keys and returns the chosen option.
 #
@@ -147,7 +147,7 @@ fully () {
     options=(FULL ONLY_PROGRAMMS)
     select_option $? 4 "${options[@]}"
     full_install=${options[$?]}
-    set_option FULL_INSTALL $full_install
+    #set_option FULL_INSTALL $full_install
 }
 
 installtype () {
@@ -157,7 +157,7 @@ installtype () {
   options=(FULL MINIMAL)
   select_option $? 4 "${options[@]}"
   install_type=${options[$?]}
-  set_option INSTALL_TYPE $install_type
+  #set_option INSTALL_TYPE $install_type
 }
 
 timezone () {
@@ -173,12 +173,12 @@ select_option $? 1 "${options[@]}"
 case ${options[$?]} in
     y|Y|yes|Yes|YES)
     echo "${time_zone} set as timezone"
-    set_option TIMEZONE $time_zone;;
+    #set_option TIMEZONE $time_zone;;
     n|N|no|NO|No)
     echo "Please enter your desired timezone e.g. Europe/London :" 
     read new_timezone
     echo "${new_timezone} set as timezone"
-    set_option TIMEZONE $new_timezone;;
+    #set_option TIMEZONE $new_timezone;;
     *) echo "Wrong option. Try again";timezone;;
 esac
 }
@@ -192,7 +192,7 @@ select_option $? 4 "${options[@]}"
 keymap=${options[$?]}
 
 echo -ne "Your key boards layout: ${keymap} \n"
-set_option KEYMAP $keymap
+#set_option KEYMAP $keymap
 }
 
 clear
