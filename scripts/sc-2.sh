@@ -1,5 +1,4 @@
 #!/bin/bash
-source ${HOME}/linux_install/scripts/sc-1.sh
 ${LOGO}
 
 if [[ ${full_install} == "1" ]]; then

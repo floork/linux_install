@@ -1,5 +1,5 @@
 # !/bin/bash
-source ${HOME}/linux_install/scripts/sc-1.sh
+
 
 if [[ ${full_install} == "0" ]]; then
     if [[ ${install_type} == "0" ]]; then
