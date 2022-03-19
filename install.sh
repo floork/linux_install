@@ -1,8 +1,12 @@
 #!/bin/bash
 
-set -a
-SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-set +a
+echo $USER
+read user
+if [[ ${user} == "root" ]]; then
+    SCRIPT_DIR=/home/$SUDO_USER/linux_install
+else
+    SCRIPT_DIR=$HOME/linux_install
+fi
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
@@ -17,7 +21,7 @@ echo -ne "
 --------------------------------------------------------------------------
 "
     ( bash $SCRIPT_DIR/scripts/sc-1.sh )|& tee sc-1.log
-    
+
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
