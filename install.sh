@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Find the name of the folder the scripts are in
-set -a
-SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-SCRIPTS_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"/scripts
-CONFIGS_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"/configs
-set +a
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
@@ -19,10 +13,10 @@ echo -ne "
                 Welcome to my Post-Install Script
 --------------------------------------------------------------------------
 "
-    ( bash $SCRIPT_DIR/scripts/sc-1.sh )|& tee sc-1.log
+    ( bash $$HOME/scripts/sc-1.sh )|& tee sc-1.log
         source $SCRIPTS_DIR/sc-1.sh
  
-
+bash $$HOME/scripts/sc-3.sh |& tee sc-3.log
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
