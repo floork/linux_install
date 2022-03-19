@@ -13,7 +13,7 @@ echo -ne "
                 Welcome to my Post-Install Script
 --------------------------------------------------------------------------
 "
-    ( bash ~/linux_install/scripts/sc-1.sh )|& tee sc-1.log
+    ( bash $HOME/scripts/sc-1.sh )|& tee sc-1.log
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
