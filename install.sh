@@ -13,8 +13,7 @@ echo -ne "
                 Welcome to my Post-Install Script
 --------------------------------------------------------------------------
 "
-    ( bash $$HOME/scripts/sc-1.sh )|& tee sc-1.log
-        source $SCRIPTS_DIR/sc-1.sh
+    ( bash $$HOME/scripts/sc-1.sh )|& tee sc-1.loG
  
 bash $$HOME/scripts/sc-3.sh |& tee sc-3.log
 echo -ne "

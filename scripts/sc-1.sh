@@ -15,6 +15,7 @@ echo -ne "
 --------------------------------------------------------------------------
 "
 }
+
 timezone () {
     # Added this from arch wiki https://wiki.archlinux.org/title/System_time
     time_zone="$(curl --fail https://ipapi.co/timezone)"
