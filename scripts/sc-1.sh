@@ -4,7 +4,6 @@ SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 CONFIGS_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"/configs
 set +a
 echo "#!/bin/bash" > $SCRIPT_DIR/config/conf.conf
-echo "#!/bin/bash" > $SCRIPT_DIR/config/conf.conf
 logo () {
 echo -ne "
 
@@ -32,7 +31,7 @@ timezone () {
     0) No
     Choose an option:  " 
     read -r time_zone
-    echo "time_zone=${time_zone}" >> $CONFIGS_DIR/linux_install/config/conf.conf
+    echo "time_zone=${time_zone}" >> $CONFIGS_DIR/conf.conf
 }
 
 keymaps () {
@@ -48,7 +47,7 @@ keymaps () {
     0) No
     "
     read -r correct_keymap
-    echo "keymap=${keymap}" >> $CONFIGS_DIR/linux_install/config/conf.conf
+    echo "keymap=${keymap}" >> $CONFIGS_DIR/conf.conf
 }
 fully(){
     echo -ne "
@@ -57,7 +56,7 @@ fully(){
     0) ONLY PROGRAMMS
     Choose an option:  "
     read -r full_install
-    echo "full_install=${full_install}" >> $CONFIGS_DIR/linux_install/config/conf.conf
+    echo "full_install=${full_install}" >> $CONFIGS_DIR/conf.conf
 }
 
 installtype() {
@@ -75,7 +74,7 @@ installtype() {
     0) No
     "
     read -r correct_type
-    echo "install_type=${install_type}" >> $CONFIGS_DIR/linux_install/config/conf.conf
+    echo "install_type=${install_type}" >> $CONFIGS_DIR/conf.conf
 }
 
 clear
