@@ -21,8 +21,8 @@ echo -ne "
 "
     ( bash $SCRIPT_DIR/scripts/sc-1.sh )|& tee sc-1.log
         source $SCRIPTS_DIR/sc-1.sh
-bash $SCRIPT_DIR/scripts/sc-2.sh |& tee sc-2.log   
-bash $SCRIPT_DIR/scripts/sc-3.sh |& tee sc-3.log
+ 
+
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
