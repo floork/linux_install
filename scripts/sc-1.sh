@@ -44,7 +44,7 @@ case $time_zone in
 esac
 }
 
-keymap () {
+keymaps () {
     echo -ne "
     Please select key board layout from this list
     us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk
@@ -98,8 +98,7 @@ installtype() {
     Minimal Install: Installs only apps few selected apps to get you started\n
     1) Full
     0) Minimal
-    Choose an option:  
-    "
+    Choose an option:  "
     read -r install_type
     echo -ne "
     Your anwser was ${install_type} \n
@@ -125,6 +124,6 @@ esac
 clear
 logo
 timezone
-keymap
+keymaps
 fully
 installtype
