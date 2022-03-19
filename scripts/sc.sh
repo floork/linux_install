@@ -2,6 +2,7 @@
 
 # set up a config file
 CONFIG_FILE=$CONFIGS_DIR/setup.conf
+touch $CONFIG_FILE
     if [ ! -f $CONFIG_FILE ]; then # check if file exists
         touch -f $CONFIG_FILE # create file if not exists
     fi
