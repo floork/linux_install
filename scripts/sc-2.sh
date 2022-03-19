@@ -1,5 +1,6 @@
 #!/bin/bash
 source ${HOME}/linux_install/scripts/sc-1.sh
+${LOGO}
 
 if [[ ${full_install} == "FULL" ]]; then
     timedatectl set-ntp true
