@@ -1,6 +1,5 @@
 # !/bin/bash
 if [[ ${full_install} != "FULL" ]]; then
-  do
     if [[ $INSTALL_TYPE != "FULL" ]]; then
       cat $SCRIPT_DIR/pkgs/pacman-pkgs.txt | while read line
       do
@@ -13,11 +12,9 @@ if [[ ${full_install} != "FULL" ]]; then
         sudo pacman -S --noconfirm --needed ${line}
       done
     fi
-  done
 fi
 
 if [[ ${full_install} == "FULL" ]]; then
-  do
     if [[ $INSTALL_TYPE == "FULL" ]]; then
         cat $SCRIPT_DIR/pkgs/aur-pkgs.txt | while read line
         do
@@ -45,6 +42,5 @@ if [[ ${full_install} == "FULL" ]]; then
         echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/
 
         ( bash $SCRIPT_DIR/scripts/zsh.sh )|& tee zsh.log
-    fi;
-  done
+    fi
 fi
