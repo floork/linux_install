@@ -124,6 +124,7 @@ fully () {
     echo -ne "Do you want to install the whole script, or just to programms: "
     options=(FULL ONLY_PROGRAMMS)
     select_option $? 4 "${options[@]}"
+    full_install=${options[$?]}
 }
 
 installtype () {
@@ -132,6 +133,7 @@ installtype () {
   Minimal Install: Installs only apps few selected apps to get you started\n"
   options=(FULL MINIMAL)
   select_option $? 4 "${options[@]}"
+  install_type=${options[$?]}
 }
 
 clear
