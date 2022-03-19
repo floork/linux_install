@@ -2,7 +2,7 @@
 set -a
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 set +a
-echo "#!/bin/bash" > $SCRIPT_DIR/configs/data/data
+echo "#!/bin/bash" > $SCRIPT_DIR/configs/data
 logo () {
 echo -ne "
 
@@ -30,7 +30,7 @@ timezone () {
     0) No
     Choose an option:  " 
     read -r time_zone
-    echo "time_zone=${time_zone}" >> $SCRIPT_DIR/configs/data/data
+    echo "time_zone=${time_zone}" >> $SCRIPT_DIR/configs/data
 }
 
 keymaps () {
@@ -46,7 +46,7 @@ keymaps () {
     0) No
     "
     read -r correct_keymap
-    echo "keymap=${keymap}" >> $SCRIPT_DIR/configs/data/data
+    echo "keymap=${keymap}" >> $SCRIPT_DIR/configs/data
 }
 fully(){
     echo -ne "
@@ -55,7 +55,7 @@ fully(){
     0) ONLY PROGRAMMS
     Choose an option:  "
     read -r full_install
-    echo "full_install=${full_install}" >> $SCRIPT_DIR/configs/data/data
+    echo "full_install=${full_install}" >> $SCRIPT_DIR/configs/data
 }
 
 installtype() {
@@ -73,7 +73,7 @@ installtype() {
     0) No
     "
     read -r correct_type
-    echo "install_type=${install_type}" >> $SCRIPT_DIR/configs/data/data
+    echo "install_type=${install_type}" >> $SCRIPT_DIR/configs/data
 }
 
 clear
