@@ -16,32 +16,16 @@ echo -ne "
 "
 }
 timezone () {
-# Added this from arch wiki https://wiki.archlinux.org/title/System_time
-time_zone="$(curl --fail https://ipapi.co/timezone)"
-echo -ne "
-System detected your timezone to be '$time_zone' \n"
-echo -ne "
-Is this correct?
-1) Yes
-0) No
-" 
+    # Added this from arch wiki https://wiki.archlinux.org/title/System_time
+    time_zone="$(curl --fail https://ipapi.co/timezone)"
+    echo -ne "
+    System detected your timezone to be '$time_zone' \n"
+    echo -ne "
+    Is this correct?
+    1) Yes
+    0) No
+    Choose an option:  " 
 read -r time_zone
-case $time_zone in
-    1)
-    echo "${time_zone} set as timezone"
-    keymaps
-    ;;
-    0)
-    echo "Please enter your desired timezone e.g. Europe/London :" 
-    read new_timezone
-    echo "${new_timezone} set as timezone"
-    keymaps
-    ;;
-    *)
-    echo "Try again!";
-    timezone
-    ;;
-esac
 }
 
 keymaps () {
@@ -58,17 +42,6 @@ keymaps () {
     "
     read -r correct_keymap
 case $correct_keymap in 
-    1) 
-    fully
-    ;;
-    0)
-    keymaps
-    ;;
-    *)
-    echo "Try again!";
-    keymaps
-    ;;
-esac
 }
 
 fully(){
@@ -78,18 +51,6 @@ fully(){
     0) ONLY PROGRAMMS
     Choose an option:  "
     read -r full_install
-case $full_install in
-    1)
-    installtype
-    ;;
-    0)
-    installtype
-    ;;
-    *)
-    echo "Try again!";
-    fully
-    ;;
-esac
 }
 
 installtype() {
@@ -107,18 +68,6 @@ installtype() {
     0) No
     "
     read -r correct_type
-case $correct_type in 
-    1) 
-    echo "nice"
-    ;;
-    0)
-    installtype
-    ;;
-    *)
-    echo "Try again!";
-    installtype
-    ;;
-esac
 }
 
 clear
