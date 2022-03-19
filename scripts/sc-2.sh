@@ -1,5 +1,5 @@
 #!/bin/bash
-source ${HOME}/linux_install/sc-1.sh
+source ${HOME}/linux_install/sc.sh
 ${LOGO}
 
 if [[ ${full_install} == "FULL" ]]; then

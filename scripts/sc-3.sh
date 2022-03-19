@@ -1,5 +1,5 @@
 # !/bin/bash
-source ${HOME}/linux_install/sc-1.sh
+source ${HOME}/linux_install/sc.sh
 
 if [[ ${full_install} != "FULL" ]]; then
     if [[ $INSTALL_TYPE != "FULL" ]]; then
