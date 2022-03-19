@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# set up a config file
+CONFIG_FILE=$CONFIGS_DIR/setup.conf
+    if [ ! -f $CONFIG_FILE ]; then # check if file exists
+        touch -f $CONFIG_FILE # create file if not exists
+    fi
+
+set_option() {
+    if grep -Eq "^${1}.*" $CONFIG_FILE; then # check if option exists
+        sed -i -e "/^${1}.*/d" $CONFIG_FILE 
+    fi
+    echo "${1}=${2}" >>$CONFIG_FILE
+}
+
 select_option() {
 
     # little helpers for terminal print control and key input
@@ -120,20 +133,22 @@ echo -ne "
 "
 }
 
-fully () {
+fully() {
     echo -ne "Do you want to install the whole script, or just to programms: "
     options=(FULL ONLY_PROGRAMMS)
     select_option $? 4 "${options[@]}"
     full_install=${options[$?]}
+    set_option FULL_INSTALL $full_install
 }
 
-installtype () {
+installtype() {
   echo -ne "Please select type of installation:\n\n
   Full install: Installs full featured desktop enviroment, with added apps and themes needed for everyday use\n
   Minimal Install: Installs only apps few selected apps to get you started\n"
   options=(FULL MINIMAL)
   select_option $? 4 "${options[@]}"
   install_type=${options[$?]}
+  select_option INSTALL_TYPE $install_type
 }
 
 clear

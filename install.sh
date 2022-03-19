@@ -20,7 +20,7 @@ echo -ne "
 --------------------------------------------------------------------------
 "
     ( bash $SCRIPT_DIR/scripts/sc.sh )|& tee sc-1.log
-        #source $CONFIGS_DIR/setup.conf
+        source $CONFIGS_DIR/setup.conf
     ( bash $SCRIPT_DIR/scripts/sc-2.sh )|& tee sc-2.log
     ( bash $SCRIPT_DIR/scripts/sc-3.sh )|& tee sc-3.log
     
@@ -41,5 +41,5 @@ echo -ne "
 "
 
 echo "Your System will Reboot in 10 seconds"
-sleep 10s
+sleep 5s
 #reboot -h now
