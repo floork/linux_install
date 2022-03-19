@@ -27,6 +27,7 @@ timezone () {
     0) No
     Choose an option:  " 
     read -r time_zone
+    echo "time_zone=${time_zone}" > ${HOME}/linux_install/config/conf.conf
 }
 
 keymaps () {
@@ -42,6 +43,7 @@ keymaps () {
     0) No
     "
     read -r correct_keymap
+    echo "keymap=${keymap}" > ${HOME}/linux_install/config/conf.conf
 }
 fully(){
     echo -ne "
@@ -50,6 +52,7 @@ fully(){
     0) ONLY PROGRAMMS
     Choose an option:  "
     read -r full_install
+    echo "full_install=${full_install}" > ${HOME}/linux_install/config/conf.conf
 }
 
 installtype() {
@@ -67,6 +70,7 @@ installtype() {
     0) No
     "
     read -r correct_type
+    echo "install_type=${install_type}" > ${HOME}/linux_install/config/conf.conf
 }
 
 clear

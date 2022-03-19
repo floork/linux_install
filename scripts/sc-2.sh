@@ -1,4 +1,6 @@
 #!/bin/bash
+source ${HOME}/linux_install/config/conf.conf
+
 ${LOGO}
 
 if [[ ${full_install} == "1" ]]; then

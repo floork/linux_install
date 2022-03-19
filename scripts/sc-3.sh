@@ -1,5 +1,5 @@
 # !/bin/bash
-
+source ${HOME}/linux_install/config/conf.conf
 
 if [[ ${full_install} == "0" ]]; then
     if [[ ${install_type} == "0" ]]; then
