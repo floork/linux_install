@@ -25,18 +25,18 @@ if [[ $USER == "root" ]]; then
         "
     }
 
-    timezone () {
+    time_zone () {
         # Added this from arch wiki https://wiki.archlinux.org/title/System_time
-        time_zone="$(curl --fail https://ipapi.co/timezone)"
+        timezone="$(curl --fail https://ipapi.co/timezone)"
         echo -ne "
-        System detected your timezone to be '$time_zone' \n"
+        System detected your timezone to be '$timezone' \n"
         echo -ne "
         Is this correct?
         1) Yes
         0) No
         Choose an option:  " 
-        read -r time_zone
-        case time_zone in
+        read -r timezone
+        case timezone in
         1)
         timedatectl set-ntp true
         sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
@@ -47,11 +47,11 @@ if [[ $USER == "root" ]]; then
         ln -s /usr/share/zoneinfo/${TIMEZONE} /etc/localtime
         ;;
         0)
-        timezone
+        time_zone
         ;;
         *)
         echo "Please only use 1 or 0"
-        timezone
+        time_zone
         ;;
         esac
     }
@@ -130,7 +130,7 @@ if [[ $USER == "root" ]]; then
     }
     clear
     logo
-    timezone
+    time_zone
     keymaps
     numlock
     logo2
