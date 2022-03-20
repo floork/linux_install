@@ -63,7 +63,9 @@ keymaps () {
     *)
     keymaps
     ;;
+    esac
 }
+
 fully(){
     echo -ne "
     Do you want to install the whole script, or just to programms:
