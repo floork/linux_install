@@ -43,6 +43,7 @@ keymaps () {
     Please select key board layout from this list:
 
     us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk
+    :
     "
     read keymap
     echo -ne "
@@ -50,6 +51,7 @@ keymaps () {
     Is this Correct?
     1) Yes
     0) No
+    :
     "
     read -r correct_keymap
     echo "keymap=${keymap}" >> $SCRIPT_DIR/configs/data
@@ -90,6 +92,6 @@ fully
 installtype
 clear
 
-export ${logo} ${time_zone} ${keymap} ${full_install} ${install_type}
+export logo time_zone keymap full_install install_type
 bash $SCRIPT_DIR/scripts/sc-2.sh |& tee sc-2.log  
 bash $SCRIPT_DIR/scripts/sc-3.sh |& tee sc-3.log
