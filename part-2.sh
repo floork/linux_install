@@ -35,7 +35,7 @@ rt(){
             Choose an option:  "
             read -r install_type
             
-            if [["$install_type" == "1" ]]; then
+            if [[${install_type} == "1" ]]; then
                 cat ${SCRIPT_DIR}/pkgs/aur-pkgs.txt | while read line
                 do
                     echo "INSTALLING Yay-Packages: ${line}"
