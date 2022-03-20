@@ -32,7 +32,7 @@ if [[ ${full_install} == "1" ]]; then
         done
         #give flatpak access to themes
         sudo flatpak override --filesystem=${base}/.themes
-      else
+        else
           echo "$(tput setaf 1)$(tput setab 7)Please install the other Programms after Completion with the install_progs.sh script with no root!!$(tput sgr 0)"
           echo "the script will continue in 6 seconds"
           sleep 6s
