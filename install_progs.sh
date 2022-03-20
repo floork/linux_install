@@ -25,11 +25,33 @@ done
 #give flatpak access to themes
 sudo flatpak override --filesystem=~/.themes
 
-cp -r $SCRIPT_DIR/configs/.config/* ${base}/.config/
-pip install konsave
-konsave -i $SCRIPT_DIR/configs/kde.knsv
-sleep 1
-konsave -a kde
+konsa(){
+    echo -ne "
+    Do you want to to install all KDE Configs?"
+    echo -ne "
+    1) ALL
+    0) Only the shortcuts
+    Choose an option:  " 
+    read -r kon
+    case ${kon} in
+    1)
+    cp -r $SCRIPT_DIR/configs/.config/* ${base}/.config/ 
+    pip install konsave
+    konsave -i $SCRIPT_DIR/configs/kde.knsv
+    sleep 1
+    konsave -a kde
+    ;;
+    0)
+    cp -r $SCRIPT_DIR/configs/.config/* ${base}/.config/
+    ;;
+    *)
+    echo "Please only use 1 or 0"
+    konsa
+    ;;
+    esac
+}
+
+konsa 
 
 bash $SCRIPT_DIR/scripts/zsh.sh  |& tee zsh.log
 
