@@ -20,11 +20,6 @@ if [[ ${full_install} == "1" ]]; then
       -------------------------------------------------------------------------
       "
       echo "numlockx on" /etc/X11/xinit/xinitrc
-      echo -ne "
-      -------------------------------------------------------------------------
-                     Enabling (and Theming) Login Display Manager
-      -------------------------------------------------------------------------
-      "
       echo "[General]" | tee /etc/sddm.conf
       echo "Numlock=on" | tee -a /etc/sddm.conf
     fi
