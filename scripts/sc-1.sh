@@ -38,7 +38,6 @@ timezone () {
     0) No
     Choose an option:  " 
     read -r time_zone
-    echo "time_zone=${time_zone}" >> $SCRIPT_DIR/configs/data
 }
 
 keymaps () {
@@ -64,7 +63,6 @@ keymaps () {
     *)
     keymaps
     ;;
-    echo "keymap=${keymap}" >> $SCRIPT_DIR/configs/data
 }
 fully(){
     echo -ne "
@@ -73,7 +71,6 @@ fully(){
     0) ONLY PROGRAMMS
     Choose an option:  "
     read -r full_install
-    echo "full_install=${full_install}" >> $SCRIPT_DIR/configs/data
 }
 
 installtype() {
@@ -85,7 +82,6 @@ installtype() {
     0) Minimal
     Choose an option:  "
     read -r install_type
-    echo "install_type=${install_type}" >> $SCRIPT_DIR/configs/data
 }
 
 clear
