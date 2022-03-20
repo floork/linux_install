@@ -28,7 +28,7 @@ zs{
 
         #make default shell
         chsh -s /bin/zsh
-        chsh -s /bin/zsh $current
+        chsh -s /bin/zsh $USER
         ;;
         0)
         echo "oK"
@@ -37,6 +37,7 @@ zs{
         echo "Please use 1 or 0"
         zs
         ;;
+        esac
 }
 
 zs
