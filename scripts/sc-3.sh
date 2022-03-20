@@ -17,12 +17,13 @@ fi
 
 if [[ ${full_install} == "1" ]]; then
     if [[  ==${install_type} "1" ]]; then
+        if [[ $USER != "root" ]]; then
         cat $SCRIPT_DIR/pkgs/aur-pkgs.txt | while read line
         do
             echo "INSTALLING Yay-Packages: ${line}"
            yay -S --noconfirm --needed ${line}
         done
-
+        
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         cat $SCRIPT_DIR/pkgs/flatpaks.txt | while read line
         do
@@ -31,6 +32,11 @@ if [[ ${full_install} == "1" ]]; then
         done
         #give flatpak access to themes
         sudo flatpak override --filesystem=${base}/.themes
+      else
+          echo "$(tput setaf 1)$(tput setab 7)Please install the other Programms after Completion with the install_progs.sh script with no root!!$(tput sgr 0)"
+          echo "the script will continue in 6 seconds"
+          sleep 6s
+        fi
 
         cp -r $SCRIPT_DIR/configs/.config/* ${base}/.config/
         pip install konsave
