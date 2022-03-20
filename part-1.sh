@@ -5,7 +5,7 @@ if [[ $USER == "root" ]]; then
     base="/home/$SUDO_USER"
     current=$SUDO_USER
 else
-    echo "Please run this script as root!"
+    echo "Please run this script with sudo bash part-1.sh"
 fi
 
 if [[ $USER == "root" ]]; then

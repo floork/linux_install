@@ -15,7 +15,7 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 source /home/floork/.oh-my-zsh/oh-my-zsh.sh
 
 # Load aliases and shortcuts if existent.
-[ -f "/home/floork/.zsh/aliasrc" ] && source "/home/floork/.zsh/aliasrc"
+[ -f "/home/floork/.alias/aliasrc" ] && source "/home/floork/.alias/aliasrc"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

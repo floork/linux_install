@@ -91,19 +91,30 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 export EDITOR=vim
 
 # ZSH alias
-alias zshrc='${=EDITOR} ~/.zshrc' # Quick access to the ~/.zshrc file
-alias aliasrc='${=EDITOR} ~/.zsh/aliasrc' # Quick access to this file
-alias reload='source ~/.zshrc' # Reload the zshrc file
+alias zshrc='${EDITOR} ~/.zshrc' # Quick access to the ~/.zshrc file
+alias bahrc='${EDITOR} ~/.bashrc' # Quick access to the ~/.bashrc file
+alias fishrc='${EDITOR} ~/.config/fish/config.fish' # Quick access to the ~/.fishrc file
+alias aliasrc='${EDITOR} ~/.alias/aliasrc' # Quick access to this file
+reload(){
+  if [$SHELL == "/bin/zsh"] ; then
+    alias reload='source ~/.zshrc'
+  elif [$SHELL == "/bin/bash"] ; then
+    alias reload='source ~/.bashrc'
+  elif [$SHELL == "/bin/fish"] ; then
+    alias reload='source ~/.config/fish/config.fish'
+}
 
 # Regular alias
+alias please='sudo'
 alias cls=clear
 alias ende='shutdown now'
 
-# Arch alias
 alias packy='yay -S'
 alias packdate='yay -Syu'
-alias rpacky='yay -R'
+alias rpacky='yay -Rdd'
 alias pacman-update='sudo pacman-mirrors --geoip'
+alias cleanup='sudo pacman -Rns `pacman -Qtdq`' # Cleanup orphaned packages
+alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 
 # Apt alias
 alias apacky='sudo apt install'

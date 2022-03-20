@@ -143,6 +143,3 @@ winetricks
 xdg-desktop-portal-kde
 zeroconf-ioslave
 zip
-zsh
-zsh-syntax-highlighting
-zsh-autosuggestions

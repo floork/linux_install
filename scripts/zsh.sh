@@ -1,13 +1,7 @@
 #!/bin/bash
 
 zs{
-        echo -ne "
-        Do you want to install zsh?
-        1) Yes
-        0) No"
-        read -r zh
-        case ${zh} in
-        1)
+        sudo pacman -S --noconfirm --needed zsh zsh-syntax-highlighting zsh-autosuggestions
         #install zshrc
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
         exit
@@ -16,28 +10,18 @@ zs{
         git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh//plugins/zsh-autosuggestions
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
-        #powerlevel10k theme
-        git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+        #starship theme
+        sudo pacman -S --noconfirm --needed starship
 
 
         cp ${SCRIPT_DIR}/configs/.zshrc ~/.zshrc
-        echo "exec zsh" | sudo tee -a ~/.bashrc
+        cp ${SCRIPT_DIR}/configs/starship.toml ~/.config
 
-        mkdir ~/.zsh
-        cp ${SCRIPT_DIR}/configs/aliasrc ~/.zsh
+        mkdir ~/.alias
+        cp ${SCRIPT_DIR}/configs/aliasrc ~/.alias
 
         #make default shell
         chsh -s /bin/zsh
         chsh -s /bin/zsh $USER
-        ;;
-        0)
-        echo "oK"
-        ;;
-        *)
-        echo "Please use 1 or 0"
-        zs
-        ;;
-        esac
-}
 
 zs

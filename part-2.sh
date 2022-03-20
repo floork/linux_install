@@ -105,13 +105,38 @@ rt(){
             ;;
             esac
         }
+        help(){
+            echo -ne "
+            Do you want to install Fish or Zsh"
+            echo -ne "
+            1) Fish
+            2) Zsh
+            0) No
+            Choose an option:  " 
+            read -r hel
+            case ${hel} in
+            1)
+            bash ${SCRIPT_DIR}/scripts/fish.sh  |& tee fish.log
+            ;;
+            2)
+            bash ${SCRIPT_DIR}/scripts/zsh.sh  |& tee zsh.log
+            ;;
+            0)
+            bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
+            ;;
+            *)
+            echo "Please only use 1 or 0"
+            help
+            ;;
+            esac
+        }
+
+        export SCRIPT_DIR 
 
         installtype
         konsa
-
-        export SCRIPT_DIR 
-        bash ${SCRIPT_DIR}/scripts/zsh.sh  |& tee zsh.log
-
+        help
+    
         echo "Please logout from session to see all changes!"
     fi
 }

@@ -9,12 +9,7 @@ lightlyshaders-git
 mangohud
 mangohud-common
 nerd-fonts-complete
-nordic-darker-standard-buttons-theme
-nordic-darker-theme
-nordic-kde-git
-nordic-theme
 ocs-url
-sddm-nordic-theme-git
 snapper-gui-git
 timeshift
 ttf-gentium-basic
