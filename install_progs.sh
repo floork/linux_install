@@ -26,9 +26,11 @@ done
 sudo flatpak override --filesystem=~/.themes
 
 cp -r $SCRIPT_DIR/configs/.config/* ${base}/.config/
-        pip install konsave
-        konsave -i $SCRIPT_DIR/configs/kde.knsv
-        sleep 1
-        konsave -a kde
+pip install konsave
+konsave -i $SCRIPT_DIR/configs/kde.knsv
+sleep 1
+konsave -a kde
 
 bash $SCRIPT_DIR/scripts/zsh.sh  |& tee zsh.log
+
+echo "Please logout from session to see all changes!"
