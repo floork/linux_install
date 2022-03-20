@@ -40,7 +40,8 @@ timezone () {
 
 keymaps () {
     echo -ne "
-    Please select key board layout from this list
+    Please select key board layout from this list:
+
     us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk
     "
     read keymap
@@ -88,4 +89,6 @@ keymaps
 fully
 installtype
 
+export $logo $time_zone $keymap $full_install $install_type
 bash $SCRIPT_DIR/scripts/sc-2.sh |& tee sc-2.log  
+bash $SCRIPT_DIR/scripts/sc-3.sh |& tee sc-3.log
