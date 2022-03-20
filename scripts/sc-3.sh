@@ -16,7 +16,7 @@ if [[ ${full_install} == "0" ]]; then
 fi
 
 if [[ ${full_install} == "1" ]]; then
-    if [[  ==${install_type} "1" ]]; then
+    if [[ ${install_type} == "1" ]]; then
         if [[ $USER != "root" ]]; then
         cat $SCRIPT_DIR/pkgs/aur-pkgs.txt | while read line
         do

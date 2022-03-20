@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ ${full_install} == "1" ]]; then
-    if [[  ==${install_type} "1" ]]; then
+    if [[ ${install_type} == "1" ]]; then
         #install zshrc
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

@@ -68,20 +68,14 @@ fully(){
 }
 
 installtype() {
-    echo -ne "Please select type of installation:\n\n
+    echo -ne "
+    Please select type of installation:\n\n
     Full install: Installs full featured desktop enviroment, with added apps and themes needed for everyday use\n
     Minimal Install: Installs only apps few selected apps to get you started\n
     1) Full
     0) Minimal
     Choose an option:  "
     read -r install_type
-    echo -ne "
-    Your anwser was ${install_type} \n
-    Is this Correct?
-    1) Yes
-    0) No
-    "
-    read -r correct_type
     echo "install_type=${install_type}" >> $SCRIPT_DIR/configs/data
 }
 
