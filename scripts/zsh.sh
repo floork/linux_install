@@ -1,6 +1,13 @@
 #!/bin/bash
 
-
+zs{
+        echo -ne "
+        Do you want to install zsh?
+        1) Yes
+        0) No"
+        read -r zh
+        case ${zh} in
+        1)
         #install zshrc
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
         exit
@@ -22,3 +29,14 @@
         #make default shell
         chsh -s /bin/zsh
         chsh -s /bin/zsh $current
+        ;;
+        0)
+        echo "oK"
+        ;;
+        *)
+        echo "Please use 1 or 0"
+        zs
+        ;;
+}
+
+zs
