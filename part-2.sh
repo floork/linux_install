@@ -26,46 +26,45 @@ rt(){
         installtype() {
             echo -ne "
             Please select type of installation:\n\n
-            Full install: Installs full featured desktop enviroment, with added apps and themes needed for everyday use\n
-            Minimal Install: Installs only apps few selected apps to get you started\n
+            Full install: Installs full featured desktop enviroment, with added
+            apps and themes needed for everyday use\n
+            Minimal Install: Installs only apps few selected apps to get you
+            started\n
             1) Full
             0) Minimal
             Choose an option:  "
             read -r install_type
-            case install_type in
-            1)
-            cat ${SCRIPT_DIR}/pkgs/aur-pkgs.txt | while read line
-            do
-                echo "INSTALLING Yay-Packages: ${line}"
-               yay -S --noconfirm --needed ${line}
-            done
+            
+            if [["$install_type" == "1" ]]; then
+                cat ${SCRIPT_DIR}/pkgs/aur-pkgs.txt | while read line
+                do
+                    echo "INSTALLING Yay-Packages: ${line}"
+                   yay -S --noconfirm --needed ${line}
+                done
 
-            flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-            cat ${SCRIPT_DIR}/pkgs/flatpaks.txt | while read line
-            do
-                echo "INSTALLING Flatpak's: ${line}"
-               flatpak install -y --noninteractive flathub ${line}
-            done
-            #give flatpak access to themes
-            sudo flatpak override --filesystem=~/.themes
-            ;;
-            0)
-            cat ${SCRIPT_DIR}/pkgs/pacman-pkgs.txt | while read line
-              do
-                if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
-                then
-                  # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
-                  continue
-                fi
-                echo "INSTALLING: ${line}"
-                sudo pacman -S --noconfirm --needed ${line}
-              done
-            ;;
-            *)
-            echo "Please use 1 or 0"
-            installtype
-            ;;
-            esac
+                flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+                cat ${SCRIPT_DIR}/pkgs/flatpaks.txt | while read line
+                do
+                    echo "INSTALLING Flatpak's: ${line}"
+                   flatpak install -y --noninteractive flathub ${line}
+                done
+                #give flatpak access to themes
+                sudo flatpak override --filesystem=~/.themes
+            elif [["$install_type" == "0" ]]; then
+                cat ${SCRIPT_DIR}/pkgs/pacman-pkgs.txt | while read line
+                do
+                  if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
+                  then
+                    # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
+                    continue
+                  fi
+                  echo "INSTALLING: ${line}"
+                  sudo pacman -S --noconfirm --needed ${line}
+                done
+            else
+                echo "Please use 1 or 0"
+                installtype
+            fi
         }
 
         konsa(){
