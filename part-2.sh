@@ -36,10 +36,16 @@ rt(){
             read -r install_type
             if [[ $install_type == "1" ]]
             then
+                cat ${SCRIPT_DIR}/pkgs/pacman-pkgs.txt | while read line
+                do
+                    echo "INSTALLING: ${line}"
+                    sudo pacman -S --noconfirm --needed ${line}
+                done
+
                 cat ${SCRIPT_DIR}/pkgs/aur-pkgs.txt | while read line
                 do
                     echo "INSTALLING Yay-Packages: ${line}"
-                   yay -S --noconfirm --needed ${line}
+                    yay -S --noconfirm --needed ${line}
                 done
 
                 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
