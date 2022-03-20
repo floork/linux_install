@@ -63,6 +63,7 @@ if [[ $USER == "root" ]]; then
         us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk
         Choose an option:  "
         read keymap
+        keymap=keys
         echo -ne "
         Your key boards layout: ${keymap} \n
         Is this Correct?
@@ -73,7 +74,7 @@ if [[ $USER == "root" ]]; then
         case ${correct_keymap} in
         1)
         # Set keymaps
-        localectl --no-ask-password set-keymap ${KEYMAP}
+        localectl --no-ask-password set-keymap ${keys}
         ;;
         0)
         keymaps
