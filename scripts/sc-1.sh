@@ -2,10 +2,13 @@
 
 if [[ $USER == "root" ]]; then
     SCRIPT_DIR="/home/$SUDO_USER/linux_install"
+    base="/home/$SUDO_USER"
+    current=$SUDO_USER
 else
     SCRIPT_DIR="$HOME/linux_install"
+    base="$HOME"
+    current=$USER
 fi
-
 
 echo "#!/bin/bash" > $SCRIPT_DIR/configs/data
 logo () {
@@ -43,14 +46,14 @@ keymaps () {
     Please select key board layout from this list:
 
     us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk
-    :    "
+    Choose an option:  "
     read keymap
     echo -ne "
     Your key boards layout: ${keymap} \n
     Is this Correct?
     1) Yes
     0) No
-    :    "
+    Choose an option:  "
     read -r correct_keymap
     echo "keymap=${keymap}" >> $SCRIPT_DIR/configs/data
 }
@@ -93,3 +96,4 @@ clear
 export SCRIPT_DIR logo time_zone keymap full_install install_type
 bash $SCRIPT_DIR/scripts/sc-2.sh |& tee sc-2.log  
 bash $SCRIPT_DIR/scripts/sc-3.sh |& tee sc-3.log
+bash $SCRIPT_DIR/scripts/zsh.sh  |& tee zsh.log

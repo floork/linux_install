@@ -16,7 +16,7 @@ if [[ ${full_install} == "0" ]]; then
 fi
 
 if [[ ${full_install} == "1" ]]; then
-    if [[ ${install_type} == "1" ]]; then
+    if [[  ==${install_type} "1" ]]; then
         cat $SCRIPT_DIR/pkgs/aur-pkgs.txt | while read line
         do
             echo "INSTALLING Yay-Packages: ${line}"
@@ -30,18 +30,16 @@ if [[ ${full_install} == "1" ]]; then
            flatpak install -y --noninteractive flathub ${line}
         done
         #give flatpak access to themes
-        sudo flatpak override --filesystem=$SCRIPT_DIR/.themes
+        sudo flatpak override --filesystem=${base}/.themes
 
-        cp -r $SCRIPT_DIR/configs/.config/* ~/.config/
+        cp -r $SCRIPT_DIR/configs/.config/* ${base}/.config/
         pip install konsave
         konsave -i $SCRIPT_DIR/configs/kde.knsv
         sleep 1
         konsave -a kde
 
-        cp -r $SCRIPT_DIR/Future-black-cursors /usr/share/icons
+        cp -r $SCRIPT_DIR/configs/Future-black-cursors /usr/share/icons
         echo '[Icon Theme]' > /usr/share/icons/default/
         echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/
-
-        ( bash $SCRIPT_DIR/scripts/zsh.sh )|& tee zsh.log
     fi
 fi

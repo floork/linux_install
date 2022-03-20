@@ -1,22 +1,26 @@
 #!/bin/bash
 
-#install zshrc
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [[ ${full_install} == "1" ]]; then
+    if [[  ==${install_type} "1" ]]; then
+        #install zshrc
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-#install plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh//plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+        #install plugins
+        git clone https://github.com/zsh-users/zsh-autosuggestions.git ${base}/.oh-my-zsh//plugins/zsh-autosuggestions
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${base}/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
-#powerlevel10k theme
-git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+        #powerlevel10k theme
+        git clone https://github.com/romkatv/powerlevel10k.git ${base}/.oh-my-zsh/custom/themes/powerlevel10k
 
 
-cp ~/linux_install/config/.zshrc ~/.zshrc
-echo "exec zsh" | sudo tee -a ~/.bashrc
+        cp ${SCRIPT_DIR}/configs/.zshrc ${base}/.zshrc
+        echo "exec zsh" | sudo tee -a ${base}/.bashrc
 
-mkdir ~/.zsh
-cp ~/linux_install/config/aliasrc ~/.zsh
+        mkdir ${base}/.zsh
+        cp ${SCRIPT_DIR}/configs/aliasrc ${base}/.zsh
 
-#make default shell
- chsh -s /bin/zsh
- chsh -s /bin/zsh $USER
+        #make default shell
+        chsh -s /bin/zsh
+        chsh -s /bin/zsh $current
+    fi
+fi
