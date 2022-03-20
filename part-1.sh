@@ -27,7 +27,7 @@ if [[ $USER == "root" ]]; then
 
     time_zone () {
         # Added this from arch wiki https://wiki.archlinux.org/title/System_time
-        timezone="$(curl --fail https://ipapi.co/timezone)"
+        time_zone="$(curl --fail https://ipapi.co/timezone)"
         echo -ne "
         System detected your timezone to be '$timezone' \n"
         echo -ne "
