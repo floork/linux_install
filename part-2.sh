@@ -34,7 +34,8 @@ rt(){
             0) Minimal
             Choose an option:  "
             read -r install_type
-            if [[ $install_type == "1"]] then
+            if [[ $install_type == "1"]];
+            then
                 cat ${SCRIPT_DIR}/pkgs/aur-pkgs.txt | while read line
                 do
                     echo "INSTALLING Yay-Packages: ${line}"
@@ -49,7 +50,8 @@ rt(){
                 done
                 #give flatpak access to themes
                 sudo flatpak override --filesystem=~/.themes
-            elif [[ $install_type == "0" then
+            elif [[ $install_type == "0";
+            then
                 cat ${SCRIPT_DIR}/pkgs/pacman-pkgs.txt | while read line
                 do
                   if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
