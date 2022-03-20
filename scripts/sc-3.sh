@@ -45,7 +45,7 @@ if [[ ${full_install} == "1" ]]; then
         konsave -a kde
 
         cp -r $SCRIPT_DIR/configs/Future-black-cursors /usr/share/icons
-        echo '[Icon Theme]' > /usr/share/icons/default/
-        echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/
+        echo '[Icon Theme]' > /usr/share/icons/default/index.theme
+        echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/index.theme
     fi
 fi

@@ -13,4 +13,6 @@ do
    flatpak install -y --noninteractive flathub ${line}
 done
 #give flatpak access to themes
-sudo flatpak override --filesystem=${base}/.themes
+sudo flatpak override --filesystem=~/.themes
+
+bash $SCRIPT_DIR/scripts/zsh.sh  |& tee zsh.log
