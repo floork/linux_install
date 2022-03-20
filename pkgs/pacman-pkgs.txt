@@ -24,7 +24,6 @@ bridge-utils
 btrfs-progs
 celluloid
 cmatrix
-code
 cronie
 cups
 dialog
