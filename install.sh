@@ -1,12 +1,11 @@
 #!/bin/bash
 
-echo $USER
-read user
-if [[ ${user} == "root" ]]; then
+if [[ $USER == "root" ]]; then
     SCRIPT_DIR="/home/$SUDO_USER/linux_install"
 else
     SCRIPT_DIR="$HOME/linux_install"
 fi
+
 echo -ne "
 
 ███╗   ███╗██╗   ██╗██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗

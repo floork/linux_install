@@ -1,5 +1,5 @@
 #!/bin/bash
-source ${HOME}/linux_install/config/conf.conf
+source $SCRIPT_DIR/configs/data
 
 ${LOGO}
 
