@@ -62,28 +62,12 @@ if [[ $USER == "root" ]]; then
 
         us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk
         Choose an option:  "
-        read keymap
-        keymap=keys
-        echo -ne "
-        Your key boards layout: ${keymap} \n
-        Is this Correct?
-        1) Yes
-        0) No
-        Choose an option:  "
-        read -r correct_keymap
-        case ${correct_keymap} in
-        1)
-        # Set keymaps
-        localectl --no-ask-password set-keymap ${keys}
-        ;;
-        0)
-        keymaps
-        ;;
-        *)
-        echo "Please only use 1 or 0"
-        keymaps
-        ;;
-        esac
+        read -r keymap
+        if [[ ${keymap} == "us" || "by" || "ca" || "cf" || "cz" || "de" || "dk" || "es" || "et" || "fa" || "fi" || "fr" || "gr" || "hu" || "il" || "it" || "lt" || "lv" || "mk" || "nl" || "no" || "pl" || "ro" || "ru" || "sg" || "ua" || "uk" ]]; then
+            localectl --no-ask-password set-keymap ${keys}
+        else
+            keymaps
+        fi
     }
 
     numlock(){
