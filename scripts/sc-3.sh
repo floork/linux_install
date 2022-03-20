@@ -32,17 +32,17 @@ if [[ ${full_install} == "1" ]]; then
         done
         #give flatpak access to themes
         sudo flatpak override --filesystem=${base}/.themes
-        else
-          echo "$(tput setaf 1)$(tput setab 7)Please install the other Programms after Completion with the install_progs.sh script with no root!!$(tput sgr 0)"
-          echo "the script will continue in 6 seconds"
-          sleep 6s
-        fi
 
         cp -r $SCRIPT_DIR/configs/.config/* ${base}/.config/
         pip install konsave
         konsave -i $SCRIPT_DIR/configs/kde.knsv
         sleep 1
         konsave -a kde
+        else
+          echo "$(tput setaf 1)$(tput setab 7)Please install the other Programms after Completion with the install_progs.sh script with no root!!$(tput sgr 0)"
+          echo "the script will continue in 6 seconds"
+          sleep 6s
+        fi
 
         cp -r $SCRIPT_DIR/configs/Future-black-cursors /usr/share/icons
         echo '[Icon Theme]' > /usr/share/icons/default/index.theme
