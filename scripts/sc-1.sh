@@ -55,6 +55,15 @@ keymaps () {
     0) No
     Choose an option:  "
     read -r correct_keymap
+    case ${correct_keymap} in
+    1) 
+    ;;
+    0)
+    keymaps
+    ;;
+    *)
+    keymaps
+    ;;
     echo "keymap=${keymap}" >> $SCRIPT_DIR/configs/data
 }
 fully(){
