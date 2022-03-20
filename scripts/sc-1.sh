@@ -88,7 +88,8 @@ timezone
 keymaps
 fully
 installtype
+clear
 
-export $logo $time_zone $keymap $full_install $install_type
+export ${logo} ${time_zone} ${keymap} ${full_install} ${install_type}
 bash $SCRIPT_DIR/scripts/sc-2.sh |& tee sc-2.log  
 bash $SCRIPT_DIR/scripts/sc-3.sh |& tee sc-3.log

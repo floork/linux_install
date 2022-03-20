@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source $SCRIPT_DIR/configs/data
-
 ${LOGO}
 
 if [[ ${full_install} == "1" ]]; then
