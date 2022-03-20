@@ -64,7 +64,7 @@ if [[ $USER == "root" ]]; then
         Choose an option:  "
         read -r keymap
         if [[ ${keymap} == "us" || "by" || "ca" || "cf" || "cz" || "de" || "dk" || "es" || "et" || "fa" || "fi" || "fr" || "gr" || "hu" || "il" || "it" || "lt" || "lv" || "mk" || "nl" || "no" || "pl" || "ro" || "ru" || "sg" || "ua" || "uk" ]]; then
-            localectl --no-ask-password set-keymap ${keys}
+            localectl --no-ask-password set-keymap ${keymap}
         else
             keymaps
         fi
