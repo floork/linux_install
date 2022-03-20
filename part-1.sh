@@ -130,7 +130,7 @@ if [[ $USER == "root" ]]; then
     }
     clear
     logo
-    time_zone
+    #time_zone
     keymaps
     numlock
     logo2
