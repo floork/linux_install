@@ -96,6 +96,25 @@ if [[ $USER == "root" ]]; then
         ;;
         esac
     }
+    cursor(){
+        echo -ne "
+        Do you want to use the future-black-cursor?
+        "
+        echo -ne"
+        1) Yes
+        0) No
+        Choose an option: "
+        read -r answer
+        case ${answer} in
+        1)
+        cp -r ${SCRIPT_DIR}/configs/Future-black-cursors /usr/share/icons
+        echo '[Icon Theme]' > /usr/share/icons/default/index.theme
+        echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/index.theme 
+        ;;
+        0)
+        ;;
+        esac
+    }
 
     logo2(){
         echo -ne "
@@ -118,6 +137,7 @@ if [[ $USER == "root" ]]; then
     #time_zone
     keymaps
     numlock
+    cursor
     logo2
 
     echo "Your System will Reboot in 5 seconds"

@@ -89,15 +89,9 @@ rt(){
             konsave -i ${SCRIPT_DIR}/configs/kde.knsv
             sleep 1
             konsave -a kde
-            cp -r ${SCRIPT_DIR}/configs/Future-black-cursors /usr/share/icons
-            echo '[Icon Theme]' > /usr/share/icons/default/index.theme
-            echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/index.theme 
             ;;
             0)
             cp -r ${SCRIPT_DIR}/configs/.config/* ~/.config/
-            cp -r ${SCRIPT_DIR}/configs/Future-black-cursors /usr/share/icons
-            echo '[Icon Theme]' > /usr/share/icons/default/index.theme
-            echo 'Inherits=Future-black Cursors' >> /usr/share/icons/default/index.theme 
             ;;
             *)
             echo "Please only use 1 or 0"
