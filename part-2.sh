@@ -161,13 +161,26 @@ del(){
     echo -ne "
             Do you want to delete this script?"
             echo -ne "
-            1) Yes
+            1) Yes, delete and reboot
+            2) Yes, delete
+            3) Only reboot
             0) No
             Choose an option:  " 
             read -r delt
             case ${delt} in
             1)
             rm -r ${SCRIPT_DIR}
+            echo "Your System will Reboot in 5 seconds"
+            sleep 5s
+            reboot -h now
+            ;;
+            2)
+            rm -r ${SCRIPT_DIR}
+            ;;
+            3)
+            echo "Your System will Reboot in 5 seconds"
+            sleep 5s
+            reboot -h now
             ;;
             0)
             ;;
