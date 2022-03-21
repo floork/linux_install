@@ -1,7 +1,7 @@
 #!/bin/bash
 
 zs{
-        sudo pacman -S --noconfirm --needed zsh zsh-syntax-highlighting zsh-autosuggestions
+        sudo pacman -S --noconfirm --needed zsh zsh-syntax-highlighting zsh-autosuggestions 
         #install zshrc
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
         exit
@@ -12,6 +12,7 @@ zs{
 
         #starship theme
         sudo pacman -S --noconfirm --needed starship
+        yay -S --noconfirm --needed  nerd-fonts-complete-starship
 
 
         cp ${SCRIPT_DIR}/configs/.zshrc ~/.zshrc

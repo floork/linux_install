@@ -40,20 +40,6 @@ alias lrt='ls -1Fcrt'
 alias grep='grep --color'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 
-alias t='tail -f'
-
-# Command line head / tail shortcuts
-alias -g H='| head'
-alias -g T='| tail'
-alias -g G='| grep'
-alias -g L="| less"
-alias -g M="| most"
-alias -g LL="2>&1 | less"
-alias -g CA="2>&1 | cat -A"
-alias -g NE="2> /dev/null"
-alias -g NUL="> /dev/null 2>&1"
-alias -g P="2>&1| pygmentize -l pytb"
-
 alias dud='du -d 1 -h'
 alias duf='du -sh *'
 alias fd='find . -type d -name'
@@ -92,17 +78,9 @@ export EDITOR=vim
 
 # ZSH alias
 alias zshrc='${EDITOR} ~/.zshrc' # Quick access to the ~/.zshrc file
-alias bahrc='${EDITOR} ~/.bashrc' # Quick access to the ~/.bashrc file
+alias bashrc='${EDITOR} ~/.bashrc' # Quick access to the ~/.bashrc file
 alias fishrc='${EDITOR} ~/.config/fish/config.fish' # Quick access to the ~/.fishrc file
 alias aliasrc='${EDITOR} ~/.alias/aliasrc' # Quick access to this file
-reload(){
-  if [$SHELL == "/bin/zsh"] ; then
-    alias reload='source ~/.zshrc'
-  elif [$SHELL == "/bin/bash"] ; then
-    alias reload='source ~/.bashrc'
-  elif [$SHELL == "/bin/fish"] ; then
-    alias reload='source ~/.config/fish/config.fish'
-}
 
 # Regular alias
 alias please='sudo'

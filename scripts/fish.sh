@@ -12,6 +12,7 @@ fis(){
 
     #starship theme
     sudo pacman -S --noconfirm --needed starship
+    yay -S --noconfirm --needed  nerd-fonts-complete-starship
 
     cp ${SCRIPT_DIR}/configs/config.fish ~/.config/fish
     cp ${SCRIPT_DIR}/configs/starship.toml ~/.config

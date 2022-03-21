@@ -17,10 +17,11 @@ if  [ -x /usr/bin/starship ]; then
     unset -f __main
 fi
 
-# Advanced command-not-found hook
-source /usr/share/doc/find-the-command/ftc.bash
-
 # Aliases
 if [ -f ~/.alias/aliasrc ]; then
 . ~/.alias/aliasrc
 fi
+alias reload='source ~/.bashrc'
+
+# starship theme
+eval "$(starship init bash)"

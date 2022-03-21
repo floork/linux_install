@@ -107,10 +107,11 @@ rt(){
         }
         help(){
             echo -ne "
-            Do you want to install Fish or Zsh"
+            Do you want to install customize/install the Shell"
             echo -ne "
-            1) Fish
-            2) Zsh
+            1) Yes, Fish
+            2) Yes, Zsh
+            3) Yes, Bash
             0) No
             Choose an option:  " 
             read -r hel
@@ -121,8 +122,10 @@ rt(){
             2)
             bash ${SCRIPT_DIR}/scripts/zsh.sh  |& tee zsh.log
             ;;
-            0)
+            3)
             bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
+            ;;
+            0)
             ;;
             *)
             echo "Please only use 1 or 0"
