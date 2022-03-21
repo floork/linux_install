@@ -118,9 +118,11 @@ rt(){
             case ${hel} in
             1)
             bash ${SCRIPT_DIR}/scripts/fish.sh  |& tee fish.log
+            bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
             ;;
             2)
             bash ${SCRIPT_DIR}/scripts/zsh.sh  |& tee zsh.log
+            bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
             ;;
             3)
             bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log

@@ -2,6 +2,11 @@
 
 zs{
         sudo pacman -S --noconfirm --needed zsh zsh-syntax-highlighting zsh-autosuggestions 
+
+        #starship theme
+        sudo pacman -S --noconfirm --needed starship
+        yay -S --noconfirm --needed  nerd-fonts-complete-starship
+
         #install zshrc
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
         exit
@@ -10,11 +15,7 @@ zs{
         git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh//plugins/zsh-autosuggestions
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
-        #starship theme
-        sudo pacman -S --noconfirm --needed starship
-        yay -S --noconfirm --needed  nerd-fonts-complete-starship
-
-
+        #configs        
         cp ${SCRIPT_DIR}/configs/.zshrc ~/.zshrc
         cp ${SCRIPT_DIR}/configs/starship.toml ~/.config
 
