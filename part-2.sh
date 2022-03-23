@@ -39,12 +39,17 @@ rt(){
                 cat ${SCRIPT_DIR}/pkgs/pacman-pkgs.txt | while read line
                 do
                     echo "INSTALLING: ${line}"
+                    sudo pacman -Syu --noconfirm 
                     sudo pacman -S --noconfirm --needed ${line}
                 done
 
                 cat ${SCRIPT_DIR}/pkgs/aur-pkgs.txt | while read line
                 do
                     echo "INSTALLING Yay-Packages: ${line}"
+                    pacman -S --noconfirm  --needed git base-devel
+                    git clone https://aur.archlinux.org/yay-bin.git
+                    cd yay-bin
+                    makepkg -si
                     yay -S --noconfirm --needed ${line}
                 done
 
@@ -66,6 +71,7 @@ rt(){
                     continue
                   fi
                   echo "INSTALLING: ${line}"
+                  sudo pacman -Syu --noconfirm
                   sudo pacman -S --noconfirm --needed ${line}
                 done
             else
@@ -111,14 +117,26 @@ rt(){
             read -r hel
             case ${hel} in
             1)
+            pacman -S --noconfirm  --needed git base-devel
+            git clone https://aur.archlinux.org/yay-bin.git
+            cd yay-bin
+            makepkg -si
             bash ${SCRIPT_DIR}/scripts/fish.sh  |& tee fish.log
             bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
             ;;
             2)
+            pacman -S --noconfirm  --needed git base-devel
+            git clone https://aur.archlinux.org/yay-bin.git
+            cd yay-bin
+            makepkg -si
             bash ${SCRIPT_DIR}/scripts/zsh.sh  |& tee zsh.log
             bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
             ;;
             3)
+            pacman -S --noconfirm  --needed git base-devel
+            git clone https://aur.archlinux.org/yay-bin.git
+            cd yay-bin
+            makepkg -si
             bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
             ;;
             0)
