@@ -1,10 +1,7 @@
 #!/bin/bash
 
 fis(){
-    sudo pacman -S --noconfirm --needed fish
-
-    #starship theme
-    sudo pacman -S --noconfirm --needed starship
+    sudo pacman -S --noconfirm --needed fish exa starship
     yay -S --noconfirm --needed  nerd-fonts-complete-starship
 
     #install Oh My Fish
@@ -21,4 +18,4 @@ fis(){
     #Make fish default
     chsh -s /usr/bin/fish
     chsh -s /usr/bin/fish $USER
-}
+} 

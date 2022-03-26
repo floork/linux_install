@@ -1,10 +1,7 @@
 #!/bin/bash
 
 zs{
-        sudo pacman -S --noconfirm --needed zsh zsh-syntax-highlighting zsh-autosuggestions 
-
-        #starship theme
-        sudo pacman -S --noconfirm --needed starship
+        sudo pacman -S --noconfirm --needed zsh zsh-syntax-highlighting zsh-autosuggestions exa starship
         yay -S --noconfirm --needed  nerd-fonts-complete-starship
 
         #install zshrc
@@ -25,5 +22,5 @@ zs{
         #make default shell
         chsh -s /bin/zsh
         chsh -s /bin/zsh $USER
-
-zs
+}
+zs 
