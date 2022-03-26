@@ -90,40 +90,26 @@ function copy
     end
 end
 
-# link to alias file
-alias ls='ls'
-alias ll='ls -l'
-# ls, the common ones I use a lot shortened for rapid fire usage
-alias l='ls -lFh'     #size,show type,human readable
-alias la='ls -lAFh'   #long list,show almost all,show type,human readable
-alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
-alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
-alias ll='ls -l'      #long list
-alias ldot='ls -ld .*'
-alias lS='ls -1FSsh'
-alias lart='ls -1Fcart'
-alias lrt='ls -1Fcrt'
+# Alias
+alias ls='exa -s name --icons --time-style=long-iso --group-directories-first'
+alias ll='exa -ls name --icons --time-style=long-iso --group-directories-first'
+alias la='exa -as name --icons --time-style=long-iso --group-directories-first'
+alias lal='exa -las name --icons --time-style=long-iso --group-directories-first'
+
 
 alias grep='grep --color'
-alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
-
-alias dud='du -d 1 -h'
-alias duf='du -sh *'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
 alias h='history'
-alias hgrep="fc -El 0 | grep"
 alias help='man'
-alias p='ps -f'
-alias sortnr='sort -n -r'
-alias unexport='unset'
 
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias vim='vim'
 alias vi='vim'
+
 function gitpush # This is the function name and command we call
  	git --git-dir=$PWD/.git add . # Stage all unstaged files
 	git --git-dir=$PWD/.git commit -a -m $argv # Commit files with the given argument as the commit message

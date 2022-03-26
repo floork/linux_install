@@ -34,6 +34,7 @@ dolphin
 dtc
 efibootmgr
 egl-wayland
+exa
 exfat-utils
 extra-cmake-modules
 filelight
