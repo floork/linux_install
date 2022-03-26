@@ -7,6 +7,13 @@ Welcome to my Linux installation this script is divided into 2 Parts.
 ```
 sudo pacman -Syu
 ```
+and install yay
+```
+sudo pacman -S --noconfirm  --needed git base-devel
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+```
 ### Debian / Ubuntu
 ```
 Not supported yet

@@ -42,46 +42,21 @@ rt(){
                     sudo pacman -S --noconfirm --needed ${line}
                 done
 
-            echo -ne "
-            Do you have yay installed?"
-            echo -ne "
-            1) Yes
-            0) No
-            Choose an option:  "
-            read -r ya
-            case ${ya} in
-                1)
-                    cat ${SCRIPT_DIR}/pkgs/aur-pkgs.txt | while read line
-                do
-                    echo "INSTALLING Yay-Packages: ${line}"
-                    yay -S --noconfirm --needed ${line}
-                done
-                ;;
-                0)
-                pacman -S --noconfirm  --needed git base-devel
-                git clone https://aur.archlinux.org/yay-bin.git
-                cd yay-bin
-                makepkg -si
                 cat ${SCRIPT_DIR}/pkgs/aur-pkgs.txt | while read line
                 do
                     echo "INSTALLING Yay-Packages: ${line}"
                     yay -S --noconfirm --needed ${line}
                 done
-                ;;
-                *)
-                echo "Please only use 1 or 0"
-                installtype
-                ;;
-            esac 
-            
-            flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-            cat ${SCRIPT_DIR}/pkgs/flatpaks.txt | while read line
+                            
+                flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+                cat ${SCRIPT_DIR}/pkgs/flatpaks.txt | while read line
                 do
                     echo "INSTALLING Flatpak's: ${line}"
                    flatpak install -y --noninteractive flathub ${line}
                 done
                 #give flatpak access to themes
                 sudo flatpak override --filesystem=~/.themes
+                
             elif [[ $install_type == "0" ]]
             then
                 cat ${SCRIPT_DIR}/pkgs/pacman-pkgs.txt | while read line

@@ -144,18 +144,20 @@ alias please='sudo'
 alias cls=clear
 alias ende='shutdown now'
 
+# Arch alias
 alias packy='yay -S'
-alias packdate='yay -Syu'
 alias rpacky='yay -Rdd'
 alias pacman-update='sudo pacman-mirrors --geoip'
-alias cleanup='sudo pacman -Rns `pacman -Qtdq`' # Cleanup orphaned packages
+alias cleanup='sudo pacman -Rns `pacman -Qtdq` && yay -Yc' # Cleanup orphaned packages
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 
 # Apt alias
 alias apacky='sudo apt install'
-alias apckdate='sudo apt-get update && apt-get update'
 alias rapacky='sudo apt remove'
+alias acleanup='sudo apt-get autoremove'
 
 # Flatpak alias
 alias flatty='flatpak install flathub'
 alias rflatty='flatpak remove'
+alias packdate='yay -Syu && sudo flatpak update'
+alias apckdate='sudo apt-get update && apt-get update && flatpak update'
