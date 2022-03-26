@@ -159,5 +159,5 @@ alias acleanup='sudo apt-get autoremove'
 # Flatpak alias
 alias flatty='flatpak install flathub'
 alias rflatty='flatpak remove'
-alias packdate='yay -Syu && sudo flatpak update'
-alias apckdate='sudo apt-get update && apt-get update && flatpak update'
+alias packdate='yay --noconfirm -Syu && sudo flatpak -y --noninteractive update'
+alias apckdate='sudo apt-get -y update && apt-get upgrade && flatpak -y --noninteractive update'

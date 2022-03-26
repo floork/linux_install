@@ -112,26 +112,14 @@ rt(){
             read -r hel
             case ${hel} in
             1)
-            pacman -S --noconfirm  --needed git base-devel
-            git clone https://aur.archlinux.org/yay-bin.git
-            cd yay-bin
-            makepkg -si
             bash ${SCRIPT_DIR}/scripts/fish.sh  |& tee fish.log
             bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
             ;;
             2)
-            pacman -S --noconfirm  --needed git base-devel
-            git clone https://aur.archlinux.org/yay-bin.git
-            cd yay-bin
-            makepkg -si
             bash ${SCRIPT_DIR}/scripts/zsh.sh  |& tee zsh.log
             bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
             ;;
             3)
-            pacman -S --noconfirm  --needed git base-devel
-            git clone https://aur.archlinux.org/yay-bin.git
-            cd yay-bin
-            makepkg -si
             bash ${SCRIPT_DIR}/scripts/bash.sh  |& tee zsh.log
             ;;
             0)
