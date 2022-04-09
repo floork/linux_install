@@ -1,6 +1,8 @@
 # Linux install
 
-Welcome to my Linux installation this script is divided into 2 Parts.
+Welcome to my Linux installation this script.
+
+I hope you enjoy it!
 
 # Installation:
 ## 1) Get all the dependencies
