@@ -51,7 +51,7 @@ cursor(){
         echo -ne "
         Do you want to use the future-black-cursor?
         "
-        echo -ne"
+        echo -ne "
         1) Yes
         0) No
         Choose an option: "
