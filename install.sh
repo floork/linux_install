@@ -145,6 +145,7 @@ shell(){
         cd my_shell
         bash "install.sh"
         cd $SCRIPT_DIR
+        clear
     }
 
 logo2(){
@@ -198,11 +199,6 @@ del(){
         esac
     }
 
-rebot (){
-        echo "Your System will Reboot in 5 seconds"
-        sleep 5s
-        reboot -h now
-    }
 
 logo
 numlock
@@ -212,4 +208,3 @@ konsa
 shell
 logo2
 del
-rebot
