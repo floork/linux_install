@@ -180,7 +180,7 @@ del(){
             rm -r ${SCRIPT_DIR}
             echo "Your System will Reboot in 5 seconds"
             sleep 5s
-            reboot -h now
+            sudo reboot -h now
         ;;
         2)
             rm -r ${SCRIPT_DIR}
@@ -188,7 +188,7 @@ del(){
         3)
             echo "Your System will Reboot in 5 seconds"
             sleep 5s
-            reboot -h now
+            sudo reboot -h now
         ;;
         0)
         ;;
