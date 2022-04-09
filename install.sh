@@ -80,7 +80,7 @@ installtype() {
         0) No
         Choose an option:  "
         read -r install_type
-        case ${install} in
+        case ${install_type} in
         1)
             cat ${SCRIPT_DIR}/pkgs/pacman-pkgs.txt | while read line
             do
