@@ -31,7 +31,7 @@ numlock(){
                                     Numlockx
         -------------------------------------------------------------------------
             "
-            yay -S numlockx
+            yay -S  --noconfirm --needed numlockx
             echo "numlockx on" | sudo tee /etc/X11/xinit/xinitrc
             echo "[General]" | sudo tee /etc/sddm.conf
             echo "Numlock=on" | sudo tee -a /etc/sddm.conf
