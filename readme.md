@@ -2,30 +2,31 @@
 
 Welcome to my Linux installation this script is divided into 2 Parts.
 
-## Make shure your system is up to date:
-### Arch
+# Installation:
+## 1) Get all the dependencies
+### Arch-Based
 ```
 sudo pacman -Syu
-```
-and install yay
-```
 sudo pacman -S --noconfirm  --needed git base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 ```
-### Debian / Ubuntu
+### Debian-Based
 ```
 Not supported yet
 ```
-
-To use it just do:
-### at first
+## 2) Clone the Repo
+### Arch-Based Installs
 ```
-sudo bash part-1.sh
+git clone https://github.com/floork/linux_install.git
 ```
-
-### after
+### Debian-Based Installs
 ```
-./part-2.sh
+Not supported yet
+```
+## 3) Run it
+```
+cd linux_install
+./install.sh
 ```

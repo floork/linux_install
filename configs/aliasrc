@@ -1,4 +1,5 @@
-#
+### Functions ####
+
 # # ex - archive extractor
 # # usage: ex <file>
 ex ()
@@ -23,26 +24,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-alias ls='exa -s name --icons --time-style=long-iso --group-directories-first'
-alias ll='exa -ls name --icons --time-style=long-iso --group-directories-first'
-alias la='exa -as name --icons --time-style=long-iso --group-directories-first'
-alias lal='exa -las name --icons --time-style=long-iso --group-directories-first'
-
-
-alias grep='grep --color'
-alias fd='find . -type d -name'
-alias ff='find . -type f -name'
-
-alias h='history'
-alias help='man'
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias vim='vim'
-alias vi='vim'
-
 gitpush() {
     git add .
     git commit -m "$*"
@@ -54,12 +35,47 @@ gitupdate() {
     ssh-add ~/.ssh/github
     ssh -T git@github.com
 }
+### End of Functions ###
+
+### Alias ###
+
+# Regular alias
+alias please='sudo'
+alias cls=clear
+alias ende='shutdown now'
+
+# Changing "ls" to "exa"
+alias ls='exa -s name --icons --time-style=long-iso --group-directories-first'      # my preferred listing
+alias ll='exa -ls name --icons --time-style=long-iso --group-directories-first'     # long format
+alias la='exa -as name --icons --time-style=long-iso --group-directories-first'     # all files and dirs
+alias lal='exa -las name --icons --time-style=long-iso --group-directories-first'   # long format all files and dirs
+alias lt='exa -aT --color=always --group-directories-first'                         # tree listing
+
+# grep and find
+alias grep='grep --color'
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+# help and history
+alias h='history'
+alias help='man'
+
+# copy and re -move
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# git
 alias gp=gitpush
 alias gu=gitupdate
+
+# system
 alias lbrynet='/opt/LBRY/resources/static/daemon/lbrynet'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
-
+#editor
+alias vim='vim'
+alias vi='vim'
 export EDITOR=vim
 
 # ZSH alias
@@ -68,10 +84,6 @@ alias bashrc='${EDITOR} ~/.bashrc' # Quick access to the ~/.bashrc file
 alias fishrc='${EDITOR} ~/.config/fish/config.fish' # Quick access to the ~/.fishrc file
 alias aliasrc='${EDITOR} ~/.alias/aliasrc' # Quick access to this file
 
-# Regular alias
-alias please='sudo'
-alias cls=clear
-alias ende='shutdown now'
 
 # Arch alias
 alias packy='yay -S'
