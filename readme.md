@@ -22,9 +22,6 @@ Not supported yet
 ```
 sudo dnf upgrade
 sudo dnf -y install git
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
 ```
 ## 2) Clone the Repo
 ```
