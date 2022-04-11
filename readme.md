@@ -9,7 +9,7 @@ I hope you enjoy it!
 ### Arch-Based
 ```
 sudo pacman -Syu
-sudo pacman -S --noconfirm  --needed git base-devel
+sudo pacman -S --noconfirm --needed git base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
@@ -18,14 +18,17 @@ makepkg -si
 ```
 Not supported yet
 ```
+### Fedora
+```
+sudo dnf upgrade
+sudo dnf -y install git
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+```
 ## 2) Clone the Repo
-### Arch-Based Installs
 ```
 git clone https://github.com/floork/linux_install.git
-```
-### Debian-Based Installs
-```
-Not supported yet
 ```
 ## 3) Run it
 ```
