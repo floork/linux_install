@@ -1,7 +1,6 @@
 #!/bin/bash
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-export SCRIPT_DIR
 
 logo () {
     echo -ne "
@@ -133,6 +132,8 @@ del(){
         ;;
         esac
     }
+
+export SCRIPT_DIR
 
 logo
 sys
