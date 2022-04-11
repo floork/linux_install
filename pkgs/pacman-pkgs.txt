@@ -11,6 +11,7 @@ bluedevil
 bluez
 bluez-libs
 bluez-utils
+brave
 breeze
 breeze-gtk
 bridge-utils

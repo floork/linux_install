@@ -4,8 +4,10 @@ com.github.alainm23.planner
 com.dropbox.Client
 com.github.bcedu.vgrive
 com.jetbrains.PyCharm-Community
-io.github.mimbrero.WhatsAppDesktop
 com.spotify.Client
+com.visualstudio.code
+io.github.shiftey.Desktop
+io.github.mimbrero.WhatsAppDesktop
 org.audacityteam.Audacity
 org.mozilla.Thunderbird
 org.flameshot.Flameshot
