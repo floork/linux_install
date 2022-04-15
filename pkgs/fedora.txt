@@ -61,6 +61,7 @@ qemu-kvm
 sil-gentium-basic-fonts
 spectacle
 steam
+terminator
 terminus-font
 thunderbird-wayland
 timeshift
