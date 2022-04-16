@@ -55,7 +55,9 @@ konsa(){
         read -r kon
         case ${kon} in
         1)
-            cp -r ${SCRIPT_DIR}/configs/.config/* ~/.config/
+            sudo cp -r ${SCRIPT_DIR}/configs/.config/* ~/.config/
+            sudo cp ${SCRIPT_DIR}/configs/index.theme /usr/share/icons/default/
+            sudo cp ${SCRIPT_DIR}/configs/settings.ini ${HOME}/.config/gtk-3.0/
             pip install konsave
             konsave -i ${SCRIPT_DIR}/configs/kde.knsv
             sleep 1
