@@ -38,6 +38,7 @@ kate
 kde-gtk-config
 kdeplasma-addons
 kitty
+latte-dock
 libguestfs-tools
 libreoffice
 libreoffice-TexMaths
@@ -67,6 +68,7 @@ thunderbird-wayland
 timeshift
 ht-caladea-fonts
 R-fontLiberation
+vim
 virt-install
 virt-top
 vlc
