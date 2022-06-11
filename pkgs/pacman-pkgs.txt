@@ -128,6 +128,7 @@ ufw
 unrar
 unzip
 usbutils
+variety
 virt-manager
 virt-viewer
 wget

@@ -68,6 +68,7 @@ thunderbird-wayland
 timeshift
 ht-caladea-fonts
 R-fontLiberation
+variety
 vim
 virt-install
 virt-top
