@@ -2,6 +2,8 @@
 
 Welcome to my Linux installation this script.
 
+<img src="./look.png"/>
+
 I hope you enjoy it!
 
 # Installation:
