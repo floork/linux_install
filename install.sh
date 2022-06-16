@@ -125,7 +125,7 @@ export SCRIPT_DIR
 
 logo
 sys
-konsa
-shell
+#konsa
+#shell
 logo2
 del

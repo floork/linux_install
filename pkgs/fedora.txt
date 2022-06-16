@@ -27,7 +27,7 @@ google-noto-emoji-fonts
 google-noto-fonts-common
 google-roboto-fonts
 gparted
-github-desktop
+https://github.com/shiftkey/desktop/releases/download/release-2.6.2-linux1/GitHubDesktop-linux-2.6.2-linux1.rpm
 guestfs-tools
 htop
 hunspell
@@ -35,8 +35,6 @@ hunspell-de
 hunspell-en-GB
 hunspell-en-US
 kate
-kde-gtk-config
-kdeplasma-addons
 kitty
 latte-dock
 libguestfs-tools
@@ -44,9 +42,7 @@ libreoffice
 libreoffice-TexMaths
 libvirt
 libvirt-devel
-lpf-spotify-client
 make
-meslo-lg-fonts
 mingw32-wine-gecko
 mingw64-wine-gecko
 neofetch
